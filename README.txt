@@ -3,7 +3,6 @@ GANESHA VS. ANALASURA — THE FIRE WITHIN
 Files:
 - index.html : complete HTML/CSS/JavaScript comic reader
 - images/    : add cover.png and page_001.png through page_012.png
-- audio/     : add theme.mp3
 
 Artwork filenames:
 cover.png

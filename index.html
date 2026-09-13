@@ -17,22 +17,22 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ganesha vs. Analasura — The Fire Within">
 <meta property="og:description" content="A cinematic retelling of Lord Ganesha's battle with the fire demon Analasura. Read this Ganesh Chaturthi 🪔">
-<meta property="og:image" content="https://YOUR-DOMAIN.netlify.app/images/cover.png">
+<meta property="og:image" content="https://ganesha-vs-analasura.onrender.com/images/cover.png">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1536">
 <meta property="og:image:alt" content="Ganesha faces the fire demon Analasura">
-<meta property="og:url" content="https://YOUR-DOMAIN.netlify.app/">
+<meta property="og:url" content="https://ganesha-vs-analasura.onrender.com/">
 <meta property="og:site_name" content="NiG Studios">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ganesha vs. Analasura — The Fire Within">
 <meta name="twitter:description" content="Read this Ganesh Chaturthi 🪔">
-<meta name="twitter:image" content="https://YOUR-DOMAIN.netlify.app/images/cover.png">
+<meta name="twitter:image" content="https://ganesha-vs-analasura.onrender.com/images/cover.png">
 <meta name="twitter:image:alt" content="Ganesha faces the fire demon Analasura">
 
 <!-- Canonical -->
-<link rel="canonical" href="https://YOUR-DOMAIN.netlify.app/">
+<link rel="canonical" href="https://ganesha-vs-analasura.onrender.com/">
 
 <title>Ganesha vs. Analasura — The Fire Within</title>
 <style>
@@ -50,12 +50,13 @@ button{font:inherit}
 .stage{position:relative;z-index:2;width:min(980px,100vw);height:100%;display:flex;flex-direction:column}
 
 /* ============ TITLE SCREEN ============ */
-#title,#end{position:absolute;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;padding:7vh 24px 6vh;background:linear-gradient(180deg,rgba(7,4,3,.08),rgba(7,4,3,.48) 48%,rgba(5,3,2,.98) 100%),radial-gradient(ellipse at 50% 30%,#4a1b0c,#170b07 55%,#080504);background-size:cover;background-position:center}
+#title,#end{position:absolute;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;padding:7vh 24px 6vh;background:linear-gradient(180deg,rgba(7,4,3,.34) 0%,rgba(7,4,3,.58) 32%,rgba(7,4,3,.68) 55%,rgba(5,3,2,.98) 100%),radial-gradient(ellipse at 50% 30%,#4a1b0c,#170b07 55%,#080504);background-size:cover;background-position:center}
 .hidden{opacity:0!important;pointer-events:none!important}
-.coverLoaded{background-image:linear-gradient(180deg,rgba(7,4,3,.08),rgba(7,4,3,.48) 48%,rgba(5,3,2,.98)),url('./images/cover.png')!important;background-position:center 18%!important}
-.eyebrow,.chapter{font-family:Cinzel,serif;text-transform:uppercase;letter-spacing:.25em;font-size:11px;color:var(--gold)}
+.coverLoaded{background-image:linear-gradient(180deg,rgba(7,4,3,.34) 0%,rgba(7,4,3,.58) 32%,rgba(7,4,3,.68) 55%,rgba(5,3,2,.98) 100%),url('./images/cover.png')!important;background-position:center 18%!important}
+.eyebrow,.chapter{font-family:Cinzel,serif;text-transform:uppercase;letter-spacing:.25em;font-size:11px;color:var(--gold);text-shadow:0 2px 8px rgba(0,0,0,.9),0 0 14px rgba(0,0,0,.6)}
+.mantra{font-family:'Yatra One',cursive;font-size:clamp(15px,3vw,19px);color:var(--gold2);letter-spacing:.04em;margin-top:6px;text-shadow:0 2px 10px rgba(0,0,0,.9),0 0 16px rgba(0,0,0,.65)}
 #title h1{font:clamp(42px,9vw,76px)/1.02 'Yatra One';color:var(--ember2);text-shadow:0 0 36px rgba(255,107,50,.48),0 3px 0 #000;margin:12px 0}
-.subtitle{max-width:560px;color:var(--muted);line-height:1.7;font-size:14px}
+.subtitle{max-width:560px;color:var(--muted);line-height:1.7;font-size:14px;text-shadow:0 1px 6px rgba(0,0,0,.85)}
 .cta{margin-top:28px;border:1px solid var(--gold);background:rgba(10,5,3,.55);color:var(--gold2);padding:14px 28px;min-height:46px;cursor:pointer;text-transform:uppercase;letter-spacing:.16em;font:13px Cinzel}
 .cta:hover{background:rgba(255,107,50,.1);box-shadow:0 0 25px rgba(255,107,50,.2)}
 #creditsBtn{display:block;margin:18px auto 0;font-family:Cinzel,serif;letter-spacing:.2em;text-transform:uppercase;font-size:11px;background:none;border:none;color:rgba(255,224,154,.72);cursor:pointer;padding:8px;transition:color .25s ease}
@@ -112,7 +113,7 @@ button{font:inherit}
 @keyframes spin{to{transform:rotate(360deg)}}
 
 .zoomHint{position:absolute;top:14px;left:50%;transform:translateX(-50%);z-index:4;font:10px Cinzel;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:rgba(10,6,4,.6);border:1px solid var(--line);padding:7px 14px;opacity:0;transition:opacity .25s ease;pointer-events:none}
-.art:hover .zoomHint{opacity:1}
+.art:hover .zoomHint,.art.showHints .zoomHint{opacity:1}
 
 .tapHints{position:absolute;inset:0;z-index:3;pointer-events:none;display:flex;opacity:0;transition:opacity .5s ease}
 .art.showHints .tapHints{opacity:1}
@@ -183,6 +184,7 @@ button{font:inherit}
 #end h2{font:clamp(32px,7vw,52px) 'Yatra One';color:var(--ember2);margin:12px 0}
 .endText{max-width:620px;color:var(--muted);font-size:14px;line-height:1.75}
 .storyNote{max-width:650px;margin-top:20px;padding:13px 15px;border:1px solid var(--line);background:rgba(0,0,0,.2);font-size:11px;color:#9f9383;line-height:1.6}
+.finalMantra{font-family:'Yatra One',cursive;font-size:clamp(24px,5.5vw,34px);color:var(--ember2);text-shadow:0 0 28px rgba(255,107,50,.45);margin-top:24px}
 .endActions{display:flex;gap:10px;margin-top:25px;flex-wrap:wrap;justify-content:center}
 .green{border-color:var(--green)!important;color:var(--green2)!important}
 
@@ -261,6 +263,7 @@ button{font:inherit}
     <!-- ============ TITLE SCREEN ============ -->
     <div id="title">
       <div class="eyebrow">A Ganesh Chaturthi Tale</div>
+      <div class="mantra" lang="hi">श्री गणेशाय नमः</div>
       <h1>Ganesha vs. Analasura</h1>
       <div class="subtitle">
         <b>The Fire Within</b><br>
@@ -314,7 +317,7 @@ button{font:inherit}
         <div class="chapter" id="chapter"></div>
         <div class="counter" id="counter"></div>
       </div>
-      <div class="art" id="art">
+      <div class="art" id="art" role="img" aria-label="">
         <div class="artImage" id="artImage"></div>
         <div class="effect" id="effect"></div>
         <div class="placeholder" id="placeholder"></div>
@@ -347,6 +350,7 @@ button{font:inherit}
       <h2>The Power of Durva</h2>
       <div class="endText">Analasura's destructive fire was overcome, and the humble Durva grass brought relief to Ganesha. From that sacred memory grew a cherished offering: <b>21 blades of Durva</b> offered with devotion to Lord Ganesha.</div>
       <div class="storyNote"><b>Story Note:</b> The Analasura legend is preserved in regional Puranic and devotional traditions, with variations in details across retellings. This comic presents the devotional retelling used for this chapter and its association with the Durva offering.</div>
+      <div class="finalMantra" lang="hi">गणपति बाप्पा मोरया 🙏</div>
       <div class="endActions">
         <button class="cta" id="again">Read Again</button>
         <button class="cta green" id="closeNote">Close</button>
@@ -704,7 +708,8 @@ function loadImage(p){
   const token=p.file;
   placeholder.innerHTML=`<div><div class="phSpinner"></div><div class="phTitle">Page ${current+1} of ${pages.length}</div><div class="phHint">Loading artwork…</div></div>`;
   placeholder.style.display='flex';
-  artImage.style.backgroundImage='none';
+  // Fade the current panel out while the next one loads.
+  artImage.classList.add('fade');
   currentImgSrc=null;
   art.style.cursor='default';
   const img=new Image();
@@ -716,12 +721,18 @@ function loadImage(p){
     artImage.style.backgroundImage=`url("${src}")`;
     currentImgSrc=src;
     art.style.cursor='zoom-in';
+    // Fade the new panel back in (double rAF ensures the browser
+    // registers the background-image swap before the transition runs).
+    requestAnimationFrame(()=>{
+      requestAnimationFrame(()=>artImage.classList.remove('fade'));
+    });
     preloadAround(current);
   };
   img.onerror=()=>{
     if(pages[current].file!==token) return;
     placeholder.innerHTML=`<div><div class="phGlyph">${p.glyph}</div><div class="phTitle">Page ${current+1} of ${pages.length}</div><div class="phHint">Add <b>images/${p.file}</b> to your project folder to show the artwork here.</div></div>`;
     placeholder.style.display='flex';
+    artImage.classList.remove('fade');
   };
   img.src=`./images/${p.file}`;
 }
@@ -756,6 +767,11 @@ function render(i){
     b.textContent=p.bubble;
     b.classList.add('show');
   }
+  // Accessible description of the current panel for screen readers,
+  // since the artwork itself is a CSS background image with no alt text.
+  const plainText=p.text.replace(/<[^>]*>/g,'');
+  const bubbleText=p.bubble?` Dialogue: ${p.bubble}`:'';
+  art.setAttribute('aria-label', `Page ${current+1} of ${pages.length}. ${p.speaker}: ${plainText}${bubbleText}`);
   loadImage(p);
   animatePage(p);
   [...dots.children].forEach((d,n)=>d.classList.toggle('active',n===current));
@@ -764,7 +780,10 @@ function render(i){
   progress.style.width=((current+1)/pages.length*100)+'%';
   setMusicTrack(trackForPage(current));
   saveProgress(current);
-  if(current===0){
+  // Show the tap-zone hints (Back / Zoom / Next) on the first few pages
+  // so touch users — who never see the hover-only zoomHint — learn the
+  // interaction pattern before it disappears.
+  if(current<3){
     art.classList.add('showHints');
     setTimeout(()=>art.classList.remove('showHints'),3200);
   }
@@ -795,7 +814,8 @@ function showResumeModal(pageIndex){
   
   $('resumeContinue').onclick = () => {
     modal.classList.add('hidden');
-    render(pageIndex);
+    // Page was already rendered by start() before the modal opened —
+    // no need to render it again here.
     afterStart();
   };
   
