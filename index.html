@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#090504">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Ganesha vs Analasura">
+<meta name="description" content="A cinematic retelling of Lord Ganesha's battle with the fire demon Analasura, and the humble Durva grass that became a symbol of devotion.">
+
+<!-- ============================================================
+     IMPORTANT: After hosting (Netlify / Vercel / GitHub Pages),
+     replace YOUR-DOMAIN.netlify.app with your real URL below.
+     ============================================================ -->
+
+<!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ganesha vs. Analasura — The Fire Within">
+<meta property="og:description" content="A cinematic retelling of Lord Ganesha's battle with the fire demon Analasura. Read this Ganesh Chaturthi 🪔">
+<meta property="og:image" content="https://YOUR-DOMAIN.netlify.app/images/cover.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1536">
+<meta property="og:image:alt" content="Ganesha faces the fire demon Analasura">
+<meta property="og:url" content="https://YOUR-DOMAIN.netlify.app/">
+<meta property="og:site_name" content="NiG Studios">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ganesha vs. Analasura — The Fire Within">
+<meta name="twitter:description" content="Read this Ganesh Chaturthi 🪔">
+<meta name="twitter:image" content="https://YOUR-DOMAIN.netlify.app/images/cover.png">
+<meta name="twitter:image:alt" content="Ganesha faces the fire demon Analasura">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://YOUR-DOMAIN.netlify.app/">
+
+<title>Ganesha vs. Analasura — The Fire Within</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600&family=Yatra+One&display=swap');
+:root{--bg:#080504;--panel:#130a07;--gold:#d7b44a;--gold2:#ffe09a;--gold-dim:#8a7134;--ember:#ff6b32;--ember2:#ffb35f;--red:#8e2430;--green:#5eaf84;--green2:#a6efc4;--ink:#f6ead8;--muted:#b8a994;--line:rgba(215,180,74,.28)}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--ink);font-family:Poppins,sans-serif}
+button{font:inherit}
+#app{height:100dvh;min-height:100vh;position:relative;display:flex;justify-content:center;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,rgba(255,92,38,.14),transparent 48%),linear-gradient(#0d0705,#070403)}
+.ambient,.embers,.vignette{position:absolute;inset:0;pointer-events:none}
+.ambient{background:radial-gradient(ellipse 60% 42% at 50% 12%,rgba(255,145,67,.16),transparent 68%),radial-gradient(ellipse 80% 50% at 50% 100%,rgba(0,0,0,.8),transparent 70%)}
+.embers{opacity:.13;background-image:radial-gradient(circle,rgba(255,179,95,.9) 1px,transparent 1.6px);background-size:42px 42px;animation:drift 16s linear infinite}
+.vignette{box-shadow:inset 0 0 140px rgba(0,0,0,.75)}
+@keyframes drift{to{background-position:0 -160px}}
+.stage{position:relative;z-index:2;width:min(980px,100vw);height:100%;display:flex;flex-direction:column}
+
+/* ============ TITLE SCREEN ============ */
+#title,#end{position:absolute;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;padding:7vh 24px 6vh;background:linear-gradient(180deg,rgba(7,4,3,.08),rgba(7,4,3,.48) 48%,rgba(5,3,2,.98) 100%),radial-gradient(ellipse at 50% 30%,#4a1b0c,#170b07 55%,#080504);background-size:cover;background-position:center}
+.hidden{opacity:0!important;pointer-events:none!important}
+.coverLoaded{background-image:linear-gradient(180deg,rgba(7,4,3,.08),rgba(7,4,3,.48) 48%,rgba(5,3,2,.98)),url('./images/cover.png')!important;background-position:center 18%!important}
+.eyebrow,.chapter{font-family:Cinzel,serif;text-transform:uppercase;letter-spacing:.25em;font-size:11px;color:var(--gold)}
+#title h1{font:clamp(42px,9vw,76px)/1.02 'Yatra One';color:var(--ember2);text-shadow:0 0 36px rgba(255,107,50,.48),0 3px 0 #000;margin:12px 0}
+.subtitle{max-width:560px;color:var(--muted);line-height:1.7;font-size:14px}
+.cta{margin-top:28px;border:1px solid var(--gold);background:rgba(10,5,3,.55);color:var(--gold2);padding:14px 28px;min-height:46px;cursor:pointer;text-transform:uppercase;letter-spacing:.16em;font:13px Cinzel}
+.cta:hover{background:rgba(255,107,50,.1);box-shadow:0 0 25px rgba(255,107,50,.2)}
+#creditsBtn{display:block;margin:18px auto 0;font-family:Cinzel,serif;letter-spacing:.2em;text-transform:uppercase;font-size:11px;background:none;border:none;color:rgba(255,224,154,.72);cursor:pointer;padding:8px;transition:color .25s ease}
+#creditsBtn:hover{color:var(--gold2)}
+
+/* ============ SOCIAL SHARE ============ */
+.share-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:20px;flex-wrap:wrap}
+.share-label{font-family:Cinzel,serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.share-btn{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:rgba(10,6,4,.55);color:var(--muted);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:all .25s ease;padding:0;-webkit-tap-highlight-color:transparent}
+.share-btn:hover{transform:translateY(-2px);border-color:var(--gold);color:var(--gold2);box-shadow:0 6px 20px rgba(215,180,74,.25)}
+.share-btn.whatsapp:hover{background:rgba(37,211,102,.15);border-color:#25D366;color:#25D366}
+.share-btn.twitter:hover{background:rgba(255,255,255,.1);border-color:#fff;color:#fff}
+.share-btn.facebook:hover{background:rgba(24,119,242,.15);border-color:#1877F2;color:#1877F2}
+.share-btn.copy:hover{background:rgba(215,180,74,.15);border-color:var(--gold);color:var(--gold2)}
+.endShare{margin-top:30px;padding-top:24px;border-top:1px solid var(--line);text-align:center;width:100%;max-width:520px}
+.endShareTitle{font-family:Cinzel,serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.share-toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:rgba(94,175,132,.95);color:#0a0504;padding:12px 22px;border-radius:30px;font:500 13px Poppins,sans-serif;z-index:100;opacity:0;pointer-events:none;transition:all .3s ease;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.share-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ============ CREDITS MODAL ============ */
+#creditsModal{position:fixed;inset:0;z-index:60;background:rgba(4,3,2,.84);display:none;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(4px)}
+#creditsModal.open{display:flex}
+#creditsPanel{position:relative;width:min(460px,100%);max-height:85vh;overflow-y:auto;background:var(--panel);border:1px solid var(--line);box-shadow:0 0 60px rgba(0,0,0,.6);padding:30px 28px 26px}
+#creditsPanel .cEyebrow{font-family:Cinzel,serif;letter-spacing:.32em;font-size:11px;color:var(--gold);text-transform:uppercase;text-align:center}
+#creditsCloseBtn{position:absolute;top:18px;right:18px;font-family:Cinzel,serif;letter-spacing:.12em;text-transform:uppercase;font-size:11px;background:transparent;color:var(--ink);border:1px solid var(--line);padding:8px 12px;cursor:pointer;transition:all .25s ease}
+#creditsCloseBtn:hover{border-color:var(--gold);color:var(--gold)}
+#creditsPanel h2{font-family:'Yatra One',cursive;font-size:clamp(22px,5vw,28px);line-height:1.2;color:var(--ember2);text-shadow:0 0 24px rgba(255,107,50,.4);text-align:center;margin:18px 0 10px}
+#creditsPanel .cCreatedBy{text-align:center;font-size:14px;color:var(--muted);margin-bottom:20px}
+#creditsPanel .cDivider{border:none;border-top:1px solid var(--line);margin:0 0 20px}
+#creditsPanel .cRole{text-align:center;font-family:Cinzel,serif;letter-spacing:.14em;text-transform:uppercase;font-size:10.5px;color:var(--gold-dim);margin:16px 0 6px}
+#creditsPanel .cRole:first-of-type{margin-top:0}
+#creditsPanel .cName{text-align:center;font-size:14.5px;color:var(--ink);margin-bottom:2px}
+#creditsPanel .cName em{font-style:italic;color:var(--muted);font-size:13px}
+#creditsPanel .cFooter{text-align:center;font-family:Cinzel,serif;letter-spacing:.1em;text-transform:uppercase;font-size:9.5px;color:var(--muted);margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}
+
+/* ============ READER ============ */
+#reader{height:100%;display:flex;flex-direction:column;min-height:0}
+.topbar{height:62px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;padding:10px 16px}
+.topbar>*:last-child{justify-self:end}
+.topBtn,.counter{border:1px solid var(--line);background:rgba(10,6,4,.58);color:var(--muted);padding:8px 11px;font:11px Cinzel;text-transform:uppercase;letter-spacing:.1em}
+.topBtn{cursor:pointer}
+.topBtn:hover{color:var(--gold2);border-color:var(--gold)}
+
+.art{position:relative;flex:1;min-height:0;margin:0 14px;border:1px solid var(--line);overflow:hidden;background:var(--panel);isolation:isolate}
+.artImage{position:absolute;inset:-2%;background-size:cover;background-position:center 25%;background-repeat:no-repeat;transition:opacity .35s,transform 1.4s cubic-bezier(.2,.7,.2,1);transform:scale(1.02)}
+.art.zoom .artImage{transform:scale(1.08)}
+.artImage.fade{opacity:0}
+.placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;background:radial-gradient(ellipse at 50% 35%,rgba(255,107,50,.14),transparent 55%),repeating-linear-gradient(135deg,rgba(215,180,74,.045) 0 2px,transparent 2px 24px);z-index:1}
+.placeholder>div{max-width:440px}
+.phGlyph{font-size:58px;margin-bottom:12px}
+.phTitle{font:13px Cinzel;color:var(--gold);letter-spacing:.15em;text-transform:uppercase}
+.phHint{font-size:12px;color:var(--muted);line-height:1.6;margin-top:8px}
+.phSpinner{width:44px;height:44px;margin:0 auto 16px;border:3px solid rgba(215,180,74,.2);border-top-color:var(--ember2);border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.zoomHint{position:absolute;top:14px;left:50%;transform:translateX(-50%);z-index:4;font:10px Cinzel;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:rgba(10,6,4,.6);border:1px solid var(--line);padding:7px 14px;opacity:0;transition:opacity .25s ease;pointer-events:none}
+.art:hover .zoomHint{opacity:1}
+
+.tapHints{position:absolute;inset:0;z-index:3;pointer-events:none;display:flex;opacity:0;transition:opacity .5s ease}
+.art.showHints .tapHints{opacity:1}
+.tapHint{flex:1;display:flex;align-items:center;justify-content:center;font:13px Cinzel;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,224,154,.7);background:linear-gradient(90deg,rgba(255,107,50,.08),transparent 40%,transparent 60%,rgba(255,107,50,.08))}
+.tapHint.center{background:radial-gradient(ellipse at center,rgba(255,226,130,.1),transparent 70%);font-size:12px}
+
+/* ============ LIGHTBOX ============ */
+.lightboxOverlay{position:fixed;inset:0;z-index:70;background:rgba(4,3,2,.94);display:flex;align-items:center;justify-content:center;padding:40px 20px}
+.lightboxOverlay.hidden{display:none}
+#lightboxViewport{width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden;touch-action:none}
+#lightboxImg{max-width:100%;max-height:100%;object-fit:contain;border:1px solid var(--line);box-shadow:0 0 60px rgba(0,0,0,.6);cursor:grab;transform-origin:center center;-webkit-user-drag:none;user-select:none;touch-action:none}
+#lightboxImg.dragging{cursor:grabbing}
+#lightboxClose{position:absolute;top:18px;right:20px;z-index:71}
+#lightboxHint{position:absolute;top:18px;left:20px;z-index:71;font:10px Cinzel;letter-spacing:.08em;color:var(--muted);background:rgba(10,6,4,.7);border:1px solid var(--line);padding:8px 12px;max-width:220px;line-height:1.5}
+@media(max-width:600px){#lightboxHint{display:none}}
+#lightboxControls{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:71;display:flex;align-items:center;gap:10px;background:rgba(10,6,4,.75);border:1px solid var(--line);padding:8px 12px}
+#lightboxControls button{font:15px Cinzel;color:var(--ink);background:rgba(255,107,50,.08);border:1px solid var(--gold);width:34px;height:34px;cursor:pointer}
+#lightboxControls button:hover{color:var(--ember2);border-color:var(--ember2)}
+#zoomResetBtn{width:auto!important;padding:0 12px;font-size:10px!important;letter-spacing:.1em;text-transform:uppercase}
+#zoomLevel{font:11px Cinzel;color:var(--muted);min-width:44px;text-align:center}
+
+/* ============ EFFECTS ============ */
+.effect{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0}
+.fire .effect{opacity:.8;background:radial-gradient(circle at 50% 85%,rgba(255,72,24,.35),transparent 48%),linear-gradient(0deg,rgba(255,66,20,.14),transparent 55%);animation:firePulse 1.3s ease-in-out infinite}
+.battle .effect{opacity:.45;background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);animation:flash .8s infinite}
+.divine .effect{opacity:.9;background:radial-gradient(circle at 50% 45%,rgba(255,226,130,.34),transparent 45%);animation:divine 2.5s ease-in-out infinite}
+.cooling .effect{opacity:.8;background:radial-gradient(circle at 50% 60%,rgba(88,207,142,.25),transparent 52%)}
+@keyframes firePulse{50%{opacity:.45;transform:scale(1.02)}}
+@keyframes flash{50%{opacity:.9}}
+@keyframes divine{50%{opacity:.35;transform:scale(1.06)}}
+
+.caption{position:absolute;left:0;right:0;bottom:0;z-index:6;padding:70px 18px 18px;background:linear-gradient(0deg,rgba(5,3,2,.97),rgba(5,3,2,.76) 45%,transparent);pointer-events:none}
+.speaker{font:12px Cinzel;color:var(--ember2);letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px}
+.story{font-size:clamp(16px,2.4vw,20px);line-height:1.55;max-width:72ch}
+.story b{color:var(--gold2)}
+.story em{color:var(--green2)}
+
+.bubble{position:absolute;z-index:8;max-width:min(310px,52%);padding:12px 15px;border-radius:18px;background:rgba(255,247,225,.94);color:#24150d;box-shadow:0 8px 30px rgba(0,0,0,.38);font:500 13px/1.45 Poppins;display:none}
+.bubble.show{display:block;animation:pop .35s ease}
+.bubble:after{content:"";position:absolute;bottom:-9px;left:28px;border:10px solid transparent;border-top-color:rgba(255,247,225,.94);border-bottom:0}
+.bubble.right{right:20px;top:22px}
+.bubble.left{left:20px;top:22px}
+.bubble.right:after{left:auto;right:28px}
+@keyframes pop{from{opacity:0;transform:scale(.92) translateY(8px)}to{opacity:1;transform:none}}
+
+.flash{position:absolute;inset:0;background:#fff;z-index:15;pointer-events:none;opacity:0}
+.flash.go{animation:screenFlash .45s}
+.shake{animation:shake .45s}
+@keyframes screenFlash{0%{opacity:0}25%{opacity:.35}100%{opacity:0}}
+@keyframes shake{0%,100%{transform:translate(0)}20%{transform:translate(-5px,2px)}40%{transform:translate(5px,-2px)}60%{transform:translate(-4px,-1px)}80%{transform:translate(3px,2px)}}
+
+/* ============ DOTS & CONTROLS ============ */
+.dots{height:26px;display:flex;align-items:center;justify-content:center;gap:5px}
+.dot{width:6px;height:6px;border-radius:5px;background:rgba(215,180,74,.25);transition:.25s;cursor:pointer}
+.dot.active{width:18px;background:var(--ember2);box-shadow:0 0 9px rgba(255,107,50,.7)}
+.controls{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:10px;padding:8px 14px calc(12px + env(safe-area-inset-bottom))}
+.nav{min-height:45px;border:1px solid var(--gold);background:rgba(10,6,4,.68);color:var(--ink);cursor:pointer;font:12px Cinzel;text-transform:uppercase;letter-spacing:.13em}
+.nav.primary{border-color:var(--ember);color:var(--ember2)}
+.nav:disabled{opacity:.3;cursor:default}
+.nav:hover:not(:disabled){background:rgba(255,107,50,.09)}
+
+/* ============ MUSIC ============ */
+#music{position:fixed;right:14px;bottom:14px;z-index:50;min-height:44px;border:1px solid var(--line);background:rgba(8,5,4,.78);backdrop-filter:blur(8px);color:var(--ink);padding:9px 13px;cursor:pointer;font-size:12px}
+.progress{position:absolute;left:0;top:0;height:2px;background:var(--ember);z-index:60;width:0;transition:width .35s}
+
+/* ============ END SCREEN ============ */
+#end{z-index:30;justify-content:center;background:linear-gradient(180deg,rgba(7,4,3,.55),rgba(7,4,3,.95)),radial-gradient(ellipse at 50% 40%,rgba(88,175,132,.2),transparent 60%);overflow-y:auto;padding-top:5vh;padding-bottom:5vh}
+#end h2{font:clamp(32px,7vw,52px) 'Yatra One';color:var(--ember2);margin:12px 0}
+.endText{max-width:620px;color:var(--muted);font-size:14px;line-height:1.75}
+.storyNote{max-width:650px;margin-top:20px;padding:13px 15px;border:1px solid var(--line);background:rgba(0,0,0,.2);font-size:11px;color:#9f9383;line-height:1.6}
+.endActions{display:flex;gap:10px;margin-top:25px;flex-wrap:wrap;justify-content:center}
+.green{border-color:var(--green)!important;color:var(--green2)!important}
+
+/* ============ MODALS (story note + resume) ============ */
+.noteOverlay{position:fixed;inset:0;z-index:40;display:flex;align-items:center;justify-content:center;background:rgba(5,3,2,.78);padding:24px}
+.noteOverlay.hidden{display:none}
+.noteBox{max-width:520px;width:100%;background:var(--panel);border:1px solid var(--gold);padding:26px 22px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.noteBox .storyNote{margin-top:14px;max-width:none;text-align:left}
+.noteBox .cta{margin-top:20px}
+#resumeModal .noteBox{border-color:var(--ember);animation:pop .35s ease}
+#resumeModal h2{font-family:'Yatra One',cursive;font-size:26px;color:var(--ember2);margin:10px 0 6px}
+#resumeModal p{color:var(--muted);font-size:14px;line-height:1.7}
+#resumeModal .eyebrow{color:var(--ember2)}
+#resumeModal .resumeActions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+#resumeModal .resumeActions .cta{margin-top:0}
+
+/* ============ FOOTER ============ */
+.coverFooter{position:absolute;bottom:14px;left:0;right:0;text-align:center;font:10px Cinzel;letter-spacing:.14em;text-transform:uppercase;color:rgba(184,169,148,.55);pointer-events:none}
+
+/* ============ MUSIC PROMPT ============ */
+.musicPrompt{position:fixed;z-index:55;bottom:80px;left:50%;transform:translateX(-50%);background:var(--panel);border:1px solid var(--gold);padding:18px 22px;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.6);text-align:center;max-width:340px;width:calc(100% - 40px);animation:pop .35s ease}
+.musicPrompt h4{font-family:Cinzel,serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.musicPrompt p{font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:14px}
+.musicPrompt .mpRow{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.musicPrompt button{font:11px Cinzel;letter-spacing:.12em;text-transform:uppercase;padding:10px 16px;border:1px solid var(--gold);background:rgba(10,5,3,.55);color:var(--gold2);cursor:pointer;min-height:40px}
+.musicPrompt button.no{border-color:var(--line);color:var(--muted)}
+
+/* ============ KEYBOARD HINT ============ */
+.kbdHint{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);z-index:4;font:9px Cinzel;letter-spacing:.14em;text-transform:uppercase;color:rgba(184,169,148,.45);pointer-events:none;white-space:nowrap}
+@media(max-width:900px){.kbdHint{display:none}}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:600px){
+  .topbar{height:56px;padding:8px 10px}
+  .chapter{font-size:9px;letter-spacing:.12em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:45vw}
+  .counter,.topBtn{font-size:9px;padding:7px 8px}
+  .art{margin:0 8px}
+  .caption{padding:80px 13px 15px}
+  .story{font-size:16px}
+  .bubble{font-size:11px;max-width:62%;padding:9px 11px}
+  .bubble.left{left:10px}
+  .bubble.right{right:10px}
+  .controls{padding:7px 8px calc(9px + env(safe-area-inset-bottom));gap:7px}
+  .nav{font-size:10px;padding:0 5px}
+  .dots{height:22px}
+  #music{right:9px;bottom:9px}
+  .subtitle{font-size:13px}
+  .share-btn{width:44px;height:44px}
+  .share-row{gap:12px}
+  .musicPrompt{bottom:70px}
+  .tapHint{font-size:11px}
+  .tapHint.center{font-size:10px}
+}
+
+/* ============ PRINT ============ */
+@media print{
+  .controls,.dots,#music,.topbar,.ambient,.embers,.vignette,.effect,.bubble,.share-row,.coverFooter,.kbdHint,.tapHints,#title,#creditsModal,#lightbox,.musicPrompt,.noteOverlay{display:none!important}
+  #reader{display:block!important}
+  .art{margin:0;border:none;page-break-after:always;height:auto;min-height:100vh;position:relative}
+  .artImage{position:relative;height:80vh;background-size:contain;background-position:center}
+  .caption{position:relative;background:none;padding:20px;color:#000}
+  .story,.speaker{color:#000}
+  .story b{color:#000}
+  body{background:#fff;color:#000}
+  .progress{display:none}
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="ambient"></div>
+  <div class="embers"></div>
+  <div class="vignette"></div>
+  <div class="stage">
+
+    <!-- ============ TITLE SCREEN ============ -->
+    <div id="title">
+      <div class="eyebrow">A Ganesh Chaturthi Tale</div>
+      <h1>Ganesha vs. Analasura</h1>
+      <div class="subtitle">
+        <b>The Fire Within</b><br>
+        The fire demon who threatened the three worlds — and the humble Durva grass that became a lasting symbol of devotion.<br>
+        <span style="display:inline-block;margin-top:10px;font-size:12px;color:var(--gold-dim);letter-spacing:.1em;">🕉️ 12 panels · ~3 min read</span>
+      </div>
+      <button class="cta" id="begin">Begin the Story</button>
+      <button id="creditsBtn">Credits</button>
+      <div class="share-row">
+        <span class="share-label">Share</span>
+        <button class="share-btn whatsapp" onclick="shareWhatsApp()" title="Share on WhatsApp" aria-label="Share on WhatsApp">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </button>
+        <button class="share-btn twitter" onclick="shareTwitter()" title="Share on X" aria-label="Share on X">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </button>
+        <button class="share-btn facebook" onclick="shareFacebook()" title="Share on Facebook" aria-label="Share on Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </button>
+        <button class="share-btn copy" onclick="copyLink()" title="Copy link" aria-label="Copy link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+        </button>
+      </div>
+      <div class="coverFooter">© 2026 NiG Studios · Made with devotion 🙏</div>
+    </div>
+
+    <!-- ============ CREDITS MODAL ============ -->
+    <div id="creditsModal">
+      <div id="creditsPanel">
+        <button id="creditsCloseBtn">✕ Close</button>
+        <div class="cEyebrow">NiG Studios</div>
+        <h2>Stories Beyond<br>Imagination</h2>
+        <div class="cCreatedBy">Created by Nishant Gaurav</div>
+        <hr class="cDivider">
+        <div class="cRole">Story &amp; Concept</div><div class="cName">Nishant Gaurav &amp; Team</div>
+        <div class="cRole">Character Creation</div><div class="cName">Nishant Gaurav &amp; Team</div>
+        <div class="cRole">Creative Direction</div><div class="cName">Nishant Gaurav</div>
+        <div class="cRole">UI/UX Design</div><div class="cName">Nishant Gaurav</div>
+        <div class="cRole">Development</div><div class="cName">Nishant Gaurav</div>
+        <div class="cRole">Artwork</div><div class="cName">Nishant Gaurav &amp; Team <em>(produced with AI assistance)</em></div>
+        <div class="cRole">Background Music</div><div class="cName">Nishant Gaurav &amp; Team <em>(produced with AI assistance)</em></div>
+        <div class="cFooter">© 2026 NiG Studios. All Rights Reserved.</div>
+      </div>
+    </div>
+
+    <!-- ============ READER ============ -->
+    <div id="reader" class="hidden">
+      <div class="progress" id="progress"></div>
+      <div class="topbar">
+        <button class="topBtn" id="home">◂ Home</button>
+        <div class="chapter" id="chapter"></div>
+        <div class="counter" id="counter"></div>
+      </div>
+      <div class="art" id="art">
+        <div class="artImage" id="artImage"></div>
+        <div class="effect" id="effect"></div>
+        <div class="placeholder" id="placeholder"></div>
+        <div class="tapHints" id="tapHints">
+          <div class="tapHint">◂ Back</div>
+          <div class="tapHint center">🔍 Zoom</div>
+          <div class="tapHint">Next ▸</div>
+        </div>
+        <div class="zoomHint" id="zoomHint">🔍 Tap center to zoom · Tap edges to navigate</div>
+        <div class="bubble left" id="bubbleLeft"></div>
+        <div class="bubble right" id="bubbleRight"></div>
+        <div class="flash" id="flash"></div>
+        <div class="caption">
+          <div class="speaker" id="speaker"></div>
+          <div class="story" id="story"></div>
+        </div>
+        <div class="kbdHint">← → Space · Esc to exit · Click image to zoom</div>
+      </div>
+      <div class="dots" id="dots"></div>
+      <div class="controls">
+        <button class="nav" id="back">◂ Back</button>
+        <button class="nav primary" id="next">Next ▸</button>
+        <button class="nav" id="toc">Story Note</button>
+      </div>
+    </div>
+
+    <!-- ============ END SCREEN ============ -->
+    <div id="end" class="hidden">
+      <div class="eyebrow">The Blessing Remains</div>
+      <h2>The Power of Durva</h2>
+      <div class="endText">Analasura's destructive fire was overcome, and the humble Durva grass brought relief to Ganesha. From that sacred memory grew a cherished offering: <b>21 blades of Durva</b> offered with devotion to Lord Ganesha.</div>
+      <div class="storyNote"><b>Story Note:</b> The Analasura legend is preserved in regional Puranic and devotional traditions, with variations in details across retellings. This comic presents the devotional retelling used for this chapter and its association with the Durva offering.</div>
+      <div class="endActions">
+        <button class="cta" id="again">Read Again</button>
+        <button class="cta green" id="closeNote">Close</button>
+      </div>
+      <div class="endShare">
+        <div class="endShareTitle">🙏 Share this story with others</div>
+        <div class="share-row">
+          <button class="share-btn whatsapp" onclick="shareWhatsApp()" aria-label="Share on WhatsApp">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </button>
+          <button class="share-btn twitter" onclick="shareTwitter()" aria-label="Share on X">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </button>
+          <button class="share-btn facebook" onclick="shareFacebook()" aria-label="Share on Facebook">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </button>
+          <button class="share-btn copy" onclick="copyLink()" aria-label="Copy link">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ STORY NOTE MODAL ============ -->
+<div id="noteModal" class="hidden noteOverlay">
+  <div class="noteBox">
+    <div class="eyebrow">A Note on This Retelling</div>
+    <div class="storyNote"><b>Story Note:</b> The Analasura legend is preserved in regional Puranic and devotional traditions, with variations in details across retellings. This comic presents the devotional retelling used for this chapter and its association with the Durva offering.</div>
+    <button class="cta green" id="closeStoryNote">Close</button>
+  </div>
+</div>
+
+<!-- ============ RESUME MODAL ============ -->
+<div id="resumeModal" class="hidden noteOverlay">
+  <div class="noteBox">
+    <div class="eyebrow">Continue Reading?</div>
+    <h2>Welcome Back 🙏</h2>
+    <p>You were reading <b style="color:var(--gold2);" id="resumePageLabel">page 1</b>.</p>
+    <p style="font-size:12px;">Continue where you left off, or start from the beginning?</p>
+    <div class="resumeActions">
+      <button class="cta" id="resumeContinue">Continue</button>
+      <button class="cta green" id="resumeRestart">Start Over</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lightbox" class="hidden lightboxOverlay">
+  <button class="topBtn" id="lightboxClose">✕ Close</button>
+  <div id="lightboxHint">Scroll or pinch to zoom · drag to pan · double-click to reset</div>
+  <div id="lightboxViewport"><img id="lightboxImg" alt="Full comic panel artwork"></div>
+  <div id="lightboxControls">
+    <button id="zoomOutBtn" title="Zoom out">−</button>
+    <span id="zoomLevel">100%</span>
+    <button id="zoomInBtn" title="Zoom in">+</button>
+    <button id="zoomResetBtn" title="Reset zoom">Reset</button>
+  </div>
+</div>
+
+<!-- Audio element — source set dynamically by JS -->
+<audio id="bgMusic" loop preload="auto"></audio>
+<button id="music">🔊 Play Music</button>
+
+<script>
+(() => {
+'use strict';
+
+// ============================================================
+//  PAGES DATA
+// ============================================================
+const pages=[
+{file:'page_001.png',chapter:'Chapter I · The Demon Born of Fire',speaker:'Narrator',glyph:'🔥',effect:'fire',text:'Among the demons who once threatened the three worlds, few were feared like <b>Analasura</b> — a terrible force of fire. Wherever he walked, flames followed.',bubble:'',zoom:true},
+{file:'page_002.png',chapter:'Chapter I · The Demon Born of Fire',speaker:'Narrator',glyph:'🔥',effect:'fire',text:'His fiery power became a weapon of destruction. Forests burned, rivers dried, villages fell to ash, and even sacred ashrams were threatened by his flames.',bubble:'',zoom:true},
+{file:'page_003.png',chapter:'Chapter II · The Hunger Grows',speaker:'Analasura',glyph:'👹',effect:'fire',text:'Analasura became more terrifying with every conquest. He did not merely burn what stood before him — he began <b>devouring living beings</b>, growing more monstrous with each victory.',bubble:'"Let the worlds tremble before my fire!"',bubbleSide:'left',zoom:true},
+{file:'page_004.png',chapter:'Chapter II · The Hunger Grows',speaker:'The Gods',glyph:'⛈️',effect:'battle',text:'The destruction spread across the realms. The gods realized that ordinary weapons could not defeat a demon of flame. <b>Fire could not defeat fire.</b> Water alone could not end his fury.',bubble:'"There must be another way…"',bubbleSide:'right'},
+{file:'page_005.png',chapter:'Chapter III · The Call to Ganesha',speaker:'The Gods',glyph:'🙏',effect:'divine',text:'In their hour of greatest need, the gods turned to <b>Lord Ganesha, the remover of obstacles</b>. They prayed for the one power that could end Analasura\'s destruction.',bubble:'"Lord Ganesha, protect the three worlds!"',bubbleSide:'right'},
+{file:'page_006.png',chapter:'Chapter IV · The Confrontation',speaker:'Analasura',glyph:'😤',effect:'fire',text:'Ganesha arrived on the scorched earth. Analasura laughed at the sight of the elephant-headed god and unleashed a massive wave of fire.',bubble:'"Even the gods send a child to face me?"',bubbleSide:'left',shake:true},
+{file:'page_007.png',chapter:'Chapter IV · The Confrontation',speaker:'Ganesha',glyph:'🐘',effect:'divine',text:'Ganesha did not answer the demon with anger. He remained calm — then his divine form began to expand beyond ordinary measure.',bubble:'"Your fire ends here."',bubbleSide:'right',zoom:true},
+{file:'page_008.png',chapter:'Chapter V · The Great Turning',speaker:'Narrator',glyph:'🐘',effect:'divine',text:'Ganesha became immense. He opened his mouth and, in a moment that ended the battle, <b>swallowed Analasura whole</b> — flames, fury, and all.',bubble:'',zoom:true,shake:true},
+{file:'page_009.png',chapter:'Chapter VI · The Fire Within',speaker:'Narrator',glyph:'🥵',effect:'fire',text:'The world was safe. But victory had a price. Analasura\'s fire now burned fiercely <b>within Ganesha</b>, bringing unbearable heat and pain.',bubble:'',zoom:true},
+{file:'page_010.png',chapter:'Chapter VI · The Fire Within',speaker:'The Gods',glyph:'💧',effect:'fire',text:'Cooling waters, soothing chants, and powerful remedies were tried. Nothing was enough. The gods watched their savior suffer and searched desperately for a cure.',bubble:'"How can we cool this divine fire?"',bubbleSide:'right'},
+{file:'page_011.png',chapter:'Chapter VII · Twenty-One Durva',speaker:'Sage Kashyapa',glyph:'🌿',effect:'cooling',text:'At last, <b>Sage Kashyapa</b> arrived with humble Durva grass. Twenty-one blades were offered to Ganesha. The tiny green grass carried a cooling power beyond expectation.',bubble:'"Accept this humble Durva, Lord Ganesha."',bubbleSide:'right',zoom:true},
+{file:'page_012.png',chapter:'Chapter VIII · The Blessing Remains',speaker:'Narrator',glyph:'🙏',effect:'cooling',text:'The terrible heat finally subsided. Ganesha blessed the humble Durva, and its offering became a cherished part of his worship. Today, devotees offer <b>21 blades of Durva</b> with love and faith — especially during Ganesh Chaturthi.',bubble:'',zoom:true}
+];
+
+// ============================================================
+//  DOM SHORTCUTS
+// ============================================================
+const $=id=>document.getElementById(id);
+let current=0;
+const musicBtn=$('music');
+const closeNote=$('closeNote');
+const title=$('title'),reader=$('reader'),end=$('end'),art=$('art'),artImage=$('artImage'),
+      placeholder=$('placeholder'),effect=$('effect'),story=$('story'),speaker=$('speaker'),
+      chapter=$('chapter'),counter=$('counter'),dots=$('dots'),back=$('back'),next=$('next'),
+      progress=$('progress'),music=$('bgMusic'),flash=$('flash'),bubbleL=$('bubbleLeft'),bubbleR=$('bubbleRight');
+
+// ============================================================
+//  SAFE STORAGE
+// ============================================================
+const SafeStorage = {
+  get(key) {
+    try { return localStorage.getItem(key); }
+    catch(e) { return null; }
+  },
+  set(key, value) {
+    try { localStorage.setItem(key, value); return true; }
+    catch(e) { return false; }
+  },
+  remove(key) {
+    try { localStorage.removeItem(key); return true; }
+    catch(e) { return false; }
+  }
+};
+
+(function checkStorage(){
+  try {
+    localStorage.setItem('__test__', '1');
+    localStorage.removeItem('__test__');
+  } catch(e) {
+    console.warn('localStorage unavailable — progress will not be saved. Host the file to enable.');
+  }
+})();
+
+// ============================================================
+//  BUILD DOTS
+// ============================================================
+pages.forEach((p,i)=>{
+  const d=document.createElement('div');
+  d.className='dot';
+  dots.appendChild(d);
+  d.title=`Page ${i+1}`;
+  d.addEventListener('click',()=>render(i));
+});
+
+// ============================================================
+//  PROGRESS PERSISTENCE
+// ============================================================
+const STORAGE_KEY='ganesha_progress_v1';
+function saveProgress(idx){
+  SafeStorage.set(STORAGE_KEY, JSON.stringify({page:idx,ts:Date.now()}));
+}
+function loadProgress(){
+  try{
+    const raw=SafeStorage.get(STORAGE_KEY);
+    if(!raw) return null;
+    const data=JSON.parse(raw);
+    if(Date.now()-data.ts > 30*24*60*60*1000) return null;
+    return data.page;
+  }catch(e){ return null; }
+}
+
+// ============================================================
+//  MUSIC SYSTEM
+// ============================================================
+const musicRanges=[
+  {upToPage:4,  src:'./audio/track1-fire_rising.mp3'},
+  {upToPage:9,  src:'./audio/track2-divine_answer.mp3'},
+  {upToPage:12, src:'./audio/track3-cooling_grace.mp3'}
+];
+const BASE_VOL=0.5;
+let activeTrack=null;
+let musicInitialized=false;
+
+function trackForPage(pageIndex){
+  const pageNum=pageIndex+1;
+  for(const r of musicRanges){ if(pageNum<=r.upToPage) return r.src; }
+  return musicRanges[musicRanges.length-1].src;
+}
+
+// Get absolute URL for a track (helps with file:// and hosted environments)
+function absoluteTrackUrl(src){
+  try {
+    return new URL(src, window.location.href).href;
+  } catch(e) {
+    return src;
+  }
+}
+
+// Init once — set up listeners and load first track
+function initAudio(){
+  if(musicInitialized) return;
+  musicInitialized=true;
+  
+  // Attach diagnostic listeners
+  music.addEventListener('error', (e) => {
+    const err = music.error;
+    console.error('❌ Audio error:');
+    console.error('   src:', music.src);
+    if(err) console.error('   code:', err.code, '| message:', err.message);
+  });
+  
+  music.addEventListener('canplay', () => {
+    console.log('✅ Audio can play:', music.src);
+  });
+  
+  music.addEventListener('loadeddata', () => {
+    console.log('✅ Audio loaded:', music.src);
+  });
+  
+  // Set initial source
+  const initialSrc = trackForPage(0);
+  music.src = initialSrc;
+  activeTrack = initialSrc;
+  music.volume = BASE_VOL;
+  
+  console.log('🎵 Music initialized with source:', music.src);
+}
+
+// Play music — the caller should be inside a user gesture
+async function playMusic(){
+  console.log('=== PLAY MUSIC ===');
+  
+  try {
+    const targetSrc = trackForPage(current);
+    const absoluteSrc = absoluteTrackUrl(targetSrc);
+    
+    // If we need to switch tracks, do it
+    if (music.src !== absoluteSrc) {
+      console.log('Switching track to:', targetSrc);
+      music.src = targetSrc;
+      activeTrack = targetSrc;
+      music.load();
+    }
+    
+    music.volume = BASE_VOL;
+    
+    console.log('Playing:', music.src, '| readyState:', music.readyState);
+    
+    const promise = music.play();
+    if (promise !== undefined) await promise;
+    
+    musicBtn.textContent = '🔇 Stop Music';
+    console.log('✅ Music playing');
+    
+  } catch(err) {
+    console.error('❌ Play failed:', err.name, err.message);
+    musicBtn.textContent = '🔊 Play Music';
+    
+    // Friendly messages
+    if (err.name === 'NotAllowedError') {
+      showToast('Click anywhere first, then press Play');
+    } else if (err.name === 'NotSupportedError') {
+      showToast('Audio file missing or wrong format');
+    } else if (err.name === 'AbortError') {
+      // Ignore — happens when play() is interrupted
+    } else {
+      showToast('Cannot play: ' + err.message);
+    }
+  }
+}
+
+function pauseMusic(){
+  music.pause();
+  musicBtn.textContent = '🔊 Play Music';
+}
+
+function toggleMusic(){
+  if(music.paused) playMusic();
+  else pauseMusic();
+}
+
+// Crossfade between tracks
+function setMusicTrack(src){
+  if(activeTrack === src) return;
+  activeTrack = src;
+  
+  if(music.paused){
+    music.src = src;
+    music.volume = BASE_VOL;
+    return;
+  }
+  
+  const steps = 16, stepMs = 450/steps;
+  const startVol = music.volume || BASE_VOL;
+  let s = 0;
+  const fadeOut = setInterval(()=>{
+    s++;
+    music.volume = Math.max(0, startVol*(1-s/steps));
+    if(s >= steps){
+      clearInterval(fadeOut);
+      music.src = src;
+      music.currentTime = 0;
+      music.volume = 0;
+      music.play().catch(err => console.warn('Crossfade play failed:', err));
+      let j = 0;
+      const fadeIn = setInterval(()=>{
+        j++;
+        music.volume = Math.min(BASE_VOL, BASE_VOL*j/steps);
+        if(j >= steps) clearInterval(fadeIn);
+      }, stepMs);
+    }
+  }, stepMs);
+}
+
+// Music prompt
+function showMusicPrompt(){
+  document.querySelector('.musicPrompt')?.remove();
+  
+  const p = document.createElement('div');
+  p.className = 'musicPrompt';
+  p.innerHTML = `
+    <h4>🎵 Background Music</h4>
+    <p>Add cinematic music to your reading?</p>
+    <div class="mpRow">
+      <button class="yes">Yes, play</button>
+      <button class="no">No thanks</button>
+    </div>`;
+  document.body.appendChild(p);
+  
+  p.querySelector('.yes').onclick = () => {
+    SafeStorage.set('music_pref', 'yes');
+    p.remove();
+    // Play SYNCHRONOUSLY in the gesture
+    const src = trackForPage(current);
+    music.src = src;
+    activeTrack = src;
+    music.volume = BASE_VOL;
+    music.play()
+      .then(() => {
+        console.log('✅ Music started from prompt');
+        musicBtn.textContent = '🔇 Stop Music';
+      })
+      .catch(err => {
+        console.error('❌ Prompt play failed:', err);
+        showToast('Music error: ' + err.message);
+      });
+  };
+  
+  p.querySelector('.no').onclick = () => {
+    SafeStorage.set('music_pref', 'no');
+    p.remove();
+  };
+}
+
+// ============================================================
+//  IMAGE LOADING
+// ============================================================
+let currentImgSrc=null;
+const preloadCache=new Set();
+function preloadImage(file){
+  if(preloadCache.has(file)) return;
+  preloadCache.add(file);
+  const img=new Image();
+  img.src=`./images/${file}`;
+}
+function preloadAround(idx){
+  [idx+1, idx+2, idx-1].forEach(i=>{
+    if(i>=0 && i<pages.length) preloadImage(pages[i].file);
+  });
+}
+function loadImage(p){
+  const token=p.file;
+  placeholder.innerHTML=`<div><div class="phSpinner"></div><div class="phTitle">Page ${current+1} of ${pages.length}</div><div class="phHint">Loading artwork…</div></div>`;
+  placeholder.style.display='flex';
+  artImage.style.backgroundImage='none';
+  currentImgSrc=null;
+  art.style.cursor='default';
+  const img=new Image();
+  img.onload=()=>{
+    if(pages[current].file!==token) return;
+    placeholder.style.display='none';
+    const src=`./images/${p.file}`;
+    artImage.style.backgroundPosition=p.pos||'center 25%';
+    artImage.style.backgroundImage=`url("${src}")`;
+    currentImgSrc=src;
+    art.style.cursor='zoom-in';
+    preloadAround(current);
+  };
+  img.onerror=()=>{
+    if(pages[current].file!==token) return;
+    placeholder.innerHTML=`<div><div class="phGlyph">${p.glyph}</div><div class="phTitle">Page ${current+1} of ${pages.length}</div><div class="phHint">Add <b>images/${p.file}</b> to your project folder to show the artwork here.</div></div>`;
+    placeholder.style.display='flex';
+  };
+  img.src=`./images/${p.file}`;
+}
+
+// ============================================================
+//  RENDER
+// ============================================================
+function animatePage(p){
+  art.classList.remove('zoom','shake');
+  void art.offsetWidth;
+  if(p.zoom) art.classList.add('zoom');
+  if(p.shake){
+    art.classList.add('shake');
+    flash.classList.remove('go');
+    void flash.offsetWidth;
+    flash.classList.add('go');
+  }
+}
+function render(i){
+  current=Math.max(0,Math.min(i,pages.length-1));
+  const p=pages[current];
+  chapter.textContent=p.chapter;
+  counter.textContent=`${current+1} / ${pages.length}`;
+  speaker.textContent=p.speaker;
+  story.innerHTML=p.text;
+  story.animate([{opacity:0,transform:'translateY(7px)'},{opacity:1,transform:'none'}],{duration:420,easing:'ease-out'});
+  effect.className='effect '+(p.effect||'');
+  bubbleL.classList.remove('show');
+  bubbleR.classList.remove('show');
+  if(p.bubble){
+    const b=p.bubbleSide==='left'?bubbleL:bubbleR;
+    b.textContent=p.bubble;
+    b.classList.add('show');
+  }
+  loadImage(p);
+  animatePage(p);
+  [...dots.children].forEach((d,n)=>d.classList.toggle('active',n===current));
+  back.disabled=current===0;
+  next.textContent=current===pages.length-1?'Finish ▸':'Next ▸';
+  progress.style.width=((current+1)/pages.length*100)+'%';
+  setMusicTrack(trackForPage(current));
+  saveProgress(current);
+  if(current===0){
+    art.classList.add('showHints');
+    setTimeout(()=>art.classList.remove('showHints'),3200);
+  }
+}
+
+// ============================================================
+//  NAVIGATION
+// ============================================================
+function start(){
+  title.classList.add('hidden');
+  end.classList.add('hidden');
+  reader.classList.remove('hidden');
+  
+  const resume = loadProgress();
+  if(resume && resume > 0 && resume < pages.length - 1){
+    render(resume);
+    showResumeModal(resume);
+  } else {
+    render(0);
+    afterStart();
+  }
+}
+
+function showResumeModal(pageIndex){
+  const modal = $('resumeModal');
+  $('resumePageLabel').textContent = `page ${pageIndex + 1}`;
+  modal.classList.remove('hidden');
+  
+  $('resumeContinue').onclick = () => {
+    modal.classList.add('hidden');
+    render(pageIndex);
+    afterStart();
+  };
+  
+  $('resumeRestart').onclick = () => {
+    modal.classList.add('hidden');
+    render(0);
+    afterStart();
+  };
+}
+
+function afterStart(){
+  const pref = SafeStorage.get('music_pref');
+  if(!pref){
+    showMusicPrompt();
+  }
+  // If pref === 'yes', music already started in the begin button handler
+  // If pref === 'no', do nothing
+}
+
+function finish(){reader.classList.add('hidden');end.classList.remove('hidden');window.scrollTo(0,0);}
+function goNext(){current<pages.length-1?render(current+1):finish();}
+function goBack(){if(current>0)render(current-1);}
+
+// ============================================================
+//  SOCIAL SHARING
+// ============================================================
+const canonical = document.querySelector('link[rel="canonical"]')?.href;
+const SHARE_URL = (canonical && canonical.startsWith('http') && !canonical.includes('YOUR-DOMAIN'))
+  ? canonical
+  : window.location.href;
+const SHARE_TITLE='Ganesha vs. Analasura — The Fire Within';
+const SHARE_TEXT='🪔 A cinematic retelling of Lord Ganesha\'s battle with the fire demon Analasura. Read it this Ganesh Chaturthi! 🙏';
+
+function showToast(message){
+  let toast=document.querySelector('.share-toast');
+  if(!toast){
+    toast=document.createElement('div');
+    toast.className='share-toast';
+    document.body.appendChild(toast);
+  }
+  toast.textContent=message;
+  toast.classList.add('show');
+  clearTimeout(toast._timer);
+  toast._timer=setTimeout(()=>toast.classList.remove('show'),2200);
+}
+function shareWhatsApp(){
+  window.open(`https://wa.me/?text=${encodeURIComponent(SHARE_TEXT+'\n\n'+SHARE_URL)}`,'_blank','noopener,noreferrer');
+}
+function shareTwitter(){
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(SHARE_TEXT)}&url=${encodeURIComponent(SHARE_URL)}`,'_blank','noopener,noreferrer');
+}
+function shareFacebook(){
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(SHARE_URL)}`,'_blank','noopener,noreferrer');
+}
+async function copyLink(){
+  try{
+    if(navigator.share){
+      await navigator.share({title:SHARE_TITLE,text:SHARE_TEXT,url:SHARE_URL});
+      return;
+    }
+    await navigator.clipboard.writeText(SHARE_URL);
+    showToast('✓ Link copied!');
+  }catch(err){
+    const input=document.createElement('input');
+    input.value=SHARE_URL;
+    document.body.appendChild(input);
+    input.select();
+    try{ document.execCommand('copy'); showToast('✓ Link copied!'); }
+    catch(e){ showToast('Could not copy link'); }
+    document.body.removeChild(input);
+  }
+}
+window.shareWhatsApp=shareWhatsApp;
+window.shareTwitter=shareTwitter;
+window.shareFacebook=shareFacebook;
+window.copyLink=copyLink;
+
+// ============================================================
+//  MODALS
+// ============================================================
+const noteModal=$('noteModal');
+$('creditsBtn').addEventListener('click',()=>{$('creditsModal').classList.add('open');});
+$('creditsCloseBtn').addEventListener('click',()=>{$('creditsModal').classList.remove('open');});
+$('creditsModal').addEventListener('click',e=>{if(e.target.id==='creditsModal')$('creditsModal').classList.remove('open');});
+
+// ============================================================
+//  BUTTON WIRING
+// ============================================================
+$('begin').onclick = () => {
+  // If user previously chose music=yes, start it SYNCHRONOUSLY here
+  const pref = SafeStorage.get('music_pref');
+  if(pref === 'yes'){
+    const src = trackForPage(0);
+    music.src = src;
+    activeTrack = src;
+    music.volume = BASE_VOL;
+    music.play()
+      .then(() => { musicBtn.textContent = '🔇 Stop Music'; })
+      .catch(err => console.warn('Begin play failed:', err));
+  }
+  
+  start();
+};
+
+$('again').onclick=()=>{end.classList.add('hidden');title.classList.remove('hidden');};
+$('home').onclick=()=>{
+  reader.classList.add('hidden');
+  title.classList.remove('hidden');
+  music.pause();
+  activeTrack=null;
+  musicBtn.textContent='🔊 Play Music';
+  progress.style.width='0%';
+};
+back.onclick=goBack;
+next.onclick=goNext;
+musicBtn.onclick=toggleMusic;
+$('toc').onclick=()=>{noteModal.classList.remove('hidden');};
+$('closeStoryNote').onclick=()=>{noteModal.classList.add('hidden');};
+closeNote.onclick=()=>{end.classList.add('hidden');reader.classList.remove('hidden');};
+
+// ============================================================
+//  LIGHTBOX
+// ============================================================
+const lightbox=$('lightbox'),lightboxImg=$('lightboxImg'),lightboxViewport=$('lightboxViewport'),
+      zoomInBtn=$('zoomInBtn'),zoomOutBtn=$('zoomOutBtn'),zoomResetBtn=$('zoomResetBtn'),zoomLevel=$('zoomLevel');
+const MIN_SCALE=1,MAX_SCALE=5;
+let lbScale=1,lbTx=0,lbTy=0,lbDragging=false,lbStartX=0,lbStartY=0,lbStartTx=0,lbStartTy=0;
+function applyLbTransform(){lightboxImg.style.transform=`translate(${lbTx}px, ${lbTy}px) scale(${lbScale})`;zoomLevel.textContent=Math.round(lbScale*100)+'%';}
+function clampLbPan(){const maxOffset=350*lbScale;lbTx=Math.max(-maxOffset,Math.min(maxOffset,lbTx));lbTy=Math.max(-maxOffset,Math.min(maxOffset,lbTy));}
+function setLbScale(s){lbScale=Math.max(MIN_SCALE,Math.min(MAX_SCALE,s));if(lbScale===MIN_SCALE){lbTx=0;lbTy=0;}clampLbPan();applyLbTransform();}
+function resetLbZoom(){lbScale=1;lbTx=0;lbTy=0;applyLbTransform();}
+function openLightbox(){if(!currentImgSrc)return;lightboxImg.src=currentImgSrc;resetLbZoom();lightbox.classList.remove('hidden');}
+function closeLightbox(){lightbox.classList.add('hidden');resetLbZoom();}
+$('lightboxClose').addEventListener('click',closeLightbox);
+lightbox.addEventListener('click',e=>{if(e.target===lightbox||e.target===lightboxViewport)closeLightbox();});
+zoomInBtn.addEventListener('click',e=>{e.stopPropagation();setLbScale(lbScale+0.5);});
+zoomOutBtn.addEventListener('click',e=>{e.stopPropagation();setLbScale(lbScale-0.5);});
+zoomResetBtn.addEventListener('click',e=>{e.stopPropagation();resetLbZoom();});
+lightboxImg.addEventListener('click',e=>e.stopPropagation());
+lightboxImg.addEventListener('dblclick',e=>{e.stopPropagation();setLbScale(lbScale>1?1:2.5);});
+lightboxImg.addEventListener('wheel',e=>{e.preventDefault();e.stopPropagation();setLbScale(lbScale+(e.deltaY>0?-0.3:0.3));},{passive:false});
+lightboxImg.addEventListener('mousedown',e=>{if(lbScale<=1)return;lbDragging=true;lbStartX=e.clientX;lbStartY=e.clientY;lbStartTx=lbTx;lbStartTy=lbTy;lightboxImg.classList.add('dragging');e.preventDefault();});
+window.addEventListener('mousemove',e=>{if(!lbDragging)return;lbTx=lbStartTx+(e.clientX-lbStartX);lbTy=lbStartTy+(e.clientY-lbStartY);clampLbPan();applyLbTransform();});
+window.addEventListener('mouseup',()=>{if(lbDragging){lbDragging=false;lightboxImg.classList.remove('dragging');}});
+let lbTouchStartDist=0,lbTouchStartScale=1;
+function lbTouchDist(t){return Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY);}
+lightboxImg.addEventListener('touchstart',e=>{if(e.touches.length===2){lbTouchStartDist=lbTouchDist(e.touches);lbTouchStartScale=lbScale;}else if(e.touches.length===1&&lbScale>1){lbDragging=true;lbStartX=e.touches[0].clientX;lbStartY=e.touches[0].clientY;lbStartTx=lbTx;lbStartTy=lbTy;}},{passive:true});
+lightboxImg.addEventListener('touchmove',e=>{if(e.touches.length===2){e.preventDefault();const dist=lbTouchDist(e.touches);if(lbTouchStartDist>0)setLbScale(lbTouchStartScale*(dist/lbTouchStartDist));}else if(e.touches.length===1&&lbDragging){e.preventDefault();lbTx=lbStartTx+(e.touches[0].clientX-lbStartX);lbTy=lbStartTy+(e.touches[0].clientY-lbStartY);clampLbPan();applyLbTransform();}},{passive:false});
+lightboxImg.addEventListener('touchend',e=>{if(e.touches.length===0)lbDragging=false;});
+
+// ============================================================
+//  TAP ZONES + SWIPE NAVIGATION
+// ============================================================
+const SWIPE_THRESHOLD=55;
+const SWIPE_RATIO=1.15;
+const TAP_THRESHOLD=10;
+const LEFT_TAP_ZONE=0.25;
+const RIGHT_TAP_ZONE=0.75;
+
+let sx=0,sy=0;
+art.addEventListener('pointerdown',e=>{sx=e.clientX;sy=e.clientY;});
+art.addEventListener('pointerup',e=>{
+  const dx=e.clientX-sx,dy=e.clientY-sy;
+  const rect=art.getBoundingClientRect();
+  const tapX=e.clientX-rect.left;
+  const tapRatio=tapX/rect.width;
+  if(Math.abs(dx)>SWIPE_THRESHOLD && Math.abs(dx)>Math.abs(dy)*SWIPE_RATIO){
+    dx<0?goNext():goBack();
+  } else if(Math.abs(dx)<TAP_THRESHOLD && Math.abs(dy)<TAP_THRESHOLD){
+    if(tapRatio<LEFT_TAP_ZONE) goBack();
+    else if(tapRatio>RIGHT_TAP_ZONE) goNext();
+    else openLightbox();
+  }
+});
+
+// ============================================================
+//  KEYBOARD
+// ============================================================
+document.addEventListener('keydown',e=>{
+  if(!lightbox.classList.contains('hidden')){
+    if(e.key==='Escape')closeLightbox();
+    if(e.key==='+'||e.key==='=')setLbScale(lbScale+0.5);
+    if(e.key==='-'||e.key==='_')setLbScale(lbScale-0.5);
+    return;
+  }
+  if(e.key==='Escape'&&$('creditsModal').classList.contains('open')){
+    $('creditsModal').classList.remove('open');return;
+  }
+  if(reader.classList.contains('hidden'))return;
+  if(e.key==='ArrowRight'||e.key===' ')goNext();
+  if(e.key==='ArrowLeft')goBack();
+  if(e.key==='Escape')$('home').click();
+});
+
+// ============================================================
+//  COVER IMAGE LOAD
+// ============================================================
+(function(){
+  const img=new Image();
+  img.onload=()=>title.classList.add('coverLoaded');
+  img.src='./images/cover.png';
+})();
+
+// ============================================================
+//  INIT AUDIO
+// ============================================================
+initAudio();
+
+})();
+</script>
+</body>
+</html>
