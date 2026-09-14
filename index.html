@@ -8,11 +8,6 @@
 <meta name="apple-mobile-web-app-title" content="Ganesha vs Analasura">
 <meta name="description" content="A cinematic retelling of Lord Ganesha's battle with the fire demon Analasura, and the humble Durva grass that became a symbol of devotion.">
 
-<!-- ============================================================
-     IMPORTANT: After hosting (Netlify / Vercel / GitHub Pages),
-     replace YOUR-DOMAIN.netlify.app with your real URL below.
-     ============================================================ -->
-
 <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ganesha vs. Analasura — The Fire Within">
@@ -36,7 +31,7 @@
 
 <title>Ganesha vs. Analasura — The Fire Within</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600&family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600&family=Yatra+One&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
 :root{--bg:#080504;--panel:#130a07;--gold:#d7b44a;--gold2:#ffe09a;--gold-dim:#8a7134;--ember:#ff6b32;--ember2:#ffb35f;--red:#8e2430;--green:#5eaf84;--green2:#a6efc4;--ink:#f6ead8;--muted:#b8a994;--line:rgba(215,180,74,.28)}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--ink);font-family:Poppins,sans-serif}
@@ -251,6 +246,39 @@ button{font:inherit}
   body{background:#fff;color:#000}
   .progress{display:none}
 }
+
+/* ============ HINDI / DEVANAGARI TYPE ADJUSTMENTS ============ */
+body.lang-hi{font-family:'Noto Sans Devanagari',Poppins,sans-serif}
+body.lang-hi .eyebrow,body.lang-hi .chapter,body.lang-hi .cRole,body.lang-hi .cFooter,body.lang-hi .kbdHint,body.lang-hi .share-label,body.lang-hi .endShareTitle,body.lang-hi .musicPrompt h4,body.lang-hi .cta,body.lang-hi .nav,body.lang-hi .topBtn,body.lang-hi .counter,body.lang-hi #music,body.lang-hi #langToggle,body.lang-hi #creditsCloseBtn,body.lang-hi .zoomHint,body.lang-hi .tapHint,body.lang-hi #lightboxHint,body.lang-hi #zoomResetBtn,body.lang-hi #creditsBtn{font-family:'Noto Sans Devanagari',sans-serif;letter-spacing:0;text-transform:none}
+body.lang-hi .story{font-family:'Noto Sans Devanagari',sans-serif;line-height:1.85;font-size:clamp(17px,2.5vw,21px)}
+body.lang-hi .subtitle,body.lang-hi .endText,body.lang-hi .storyNote,body.lang-hi .cCreatedBy,body.lang-hi .cName,body.lang-hi #resumeModal p,body.lang-hi .musicPrompt p{font-family:'Noto Sans Devanagari',sans-serif;line-height:1.9}
+body.lang-hi .bubble{font-family:'Noto Sans Devanagari',sans-serif;font-size:14px;line-height:1.6}
+body.lang-hi #title h1,body.lang-hi #end h2,body.lang-hi #creditsPanel h2,body.lang-hi #resumeModal h2{font-family:'Yatra One',cursive}
+
+/* ============ LANGUAGE MODAL ============ */
+#langModal{z-index:65}
+#langModal .noteBox{border-color:var(--gold)}
+#langModal .langRow{display:flex;gap:12px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+#langModal .langBtn{border:1px solid var(--gold);background:rgba(10,5,3,.55);color:var(--gold2);padding:14px 26px;min-height:52px;cursor:pointer;font-size:15px;min-width:140px}
+#langModal .langBtn:hover{background:rgba(255,107,50,.12);box-shadow:0 0 25px rgba(255,107,50,.2)}
+#langModal .langBtn .sub{display:block;font-size:11px;color:var(--muted);margin-top:3px;font-family:Poppins,sans-serif;letter-spacing:0}
+
+/* ============ LANGUAGE TOGGLE ============ */
+#langToggle{position:fixed;left:14px;bottom:14px;z-index:50;min-height:40px;border:1px solid var(--line);background:rgba(8,5,4,.78);backdrop-filter:blur(8px);color:var(--ink);padding:8px 13px;cursor:pointer;font:11px Cinzel;letter-spacing:.1em;text-transform:uppercase}
+#langToggle:hover{border-color:var(--gold);color:var(--gold2)}
+@media(max-width:600px){#langToggle{left:9px;bottom:9px;padding:7px 10px;font-size:10px}}
+
+/* ============ HOW-TO-READ TUTORIAL MODAL ============ */
+#howtoModal{z-index:66}
+#howtoModal .noteBox{border-color:var(--gold);max-width:420px}
+.howtoDiagram{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin:18px 0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.howtoZone{padding:16px 6px;text-align:center;background:rgba(255,255,255,.03)}
+.howtoZone:nth-child(2){background:rgba(255,226,130,.08)}
+.howtoZone .howtoIcon{font-size:20px;display:block;margin-bottom:6px}
+.howtoZone .howtoLabel{font:10px Cinzel;letter-spacing:.08em;text-transform:uppercase;color:var(--gold2);display:block}
+.howtoZone .howtoSub{font-size:10px;color:var(--muted);display:block;margin-top:3px;line-height:1.4}
+body.lang-hi .howtoZone .howtoLabel,body.lang-hi .howtoZone .howtoSub{font-family:'Noto Sans Devanagari',sans-serif;letter-spacing:0;text-transform:none}
+.howtoNote{font-size:12px;color:var(--muted);line-height:1.6;margin-top:4px}
 </style>
 </head>
 <body>
@@ -262,18 +290,18 @@ button{font:inherit}
 
     <!-- ============ TITLE SCREEN ============ -->
     <div id="title">
-      <div class="eyebrow">A Ganesh Chaturthi Tale</div>
+      <div class="eyebrow" id="coverEyebrow">A Ganesh Chaturthi Tale</div>
       <div class="mantra" lang="hi">श्री गणेशाय नमः</div>
-      <h1>Ganesha vs. Analasura</h1>
+      <h1 id="coverTitle">Ganesha vs. Analasura</h1>
       <div class="subtitle">
-        <b>The Fire Within</b><br>
-        The fire demon who threatened the three worlds — and the humble Durva grass that became a lasting symbol of devotion.<br>
-        <span style="display:inline-block;margin-top:10px;font-size:12px;color:var(--gold-dim);letter-spacing:.1em;">🕉️ 12 panels · ~3 min read</span>
+        <b id="coverSubtitleBold">The Fire Within</b><br>
+        <span id="coverSubtitleBody">The fire demon who threatened the three worlds — and the humble Durva grass that became a lasting symbol of devotion.</span><br>
+        <span id="coverReadTime" style="display:inline-block;margin-top:10px;font-size:12px;color:var(--gold-dim);letter-spacing:.1em;">🕉️ 12 panels · ~3 min read</span>
       </div>
       <button class="cta" id="begin">Begin the Story</button>
       <button id="creditsBtn">Credits</button>
       <div class="share-row">
-        <span class="share-label">Share</span>
+        <span class="share-label" id="shareLabel1">Share</span>
         <button class="share-btn whatsapp" onclick="shareWhatsApp()" title="Share on WhatsApp" aria-label="Share on WhatsApp">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         </button>
@@ -287,7 +315,7 @@ button{font:inherit}
           <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
         </button>
       </div>
-      <div class="coverFooter">© 2026 NiG Studios · Made with devotion 🙏</div>
+      <div class="coverFooter" id="coverFooter">© 2026 NiG Studios · Made with devotion 🙏</div>
     </div>
 
     <!-- ============ CREDITS MODAL ============ -->
@@ -295,17 +323,17 @@ button{font:inherit}
       <div id="creditsPanel">
         <button id="creditsCloseBtn">✕ Close</button>
         <div class="cEyebrow">NiG Studios</div>
-        <h2>Stories Beyond<br>Imagination</h2>
-        <div class="cCreatedBy">Created by Nishant Gaurav</div>
+        <h2 id="creditsHeading">Stories Beyond<br>Imagination</h2>
+        <div class="cCreatedBy" id="creditsCreatedBy">Created by Nishant Gaurav</div>
         <hr class="cDivider">
-        <div class="cRole">Story &amp; Concept</div><div class="cName">Nishant Gaurav &amp; Team</div>
-        <div class="cRole">Character Creation</div><div class="cName">Nishant Gaurav &amp; Team</div>
-        <div class="cRole">Creative Direction</div><div class="cName">Nishant Gaurav</div>
-        <div class="cRole">UI/UX Design</div><div class="cName">Nishant Gaurav</div>
-        <div class="cRole">Development</div><div class="cName">Nishant Gaurav</div>
-        <div class="cRole">Artwork</div><div class="cName">Nishant Gaurav &amp; Team <em>(produced with AI assistance)</em></div>
-        <div class="cRole">Background Music</div><div class="cName">Nishant Gaurav &amp; Team <em>(produced with AI assistance)</em></div>
-        <div class="cFooter">© 2026 NiG Studios. All Rights Reserved.</div>
+        <div class="cRole" id="creditsRole1">Story &amp; Concept</div><div class="cName" id="creditsName1">Nishant Gaurav &amp; Team</div>
+        <div class="cRole" id="creditsRole2">Character Creation</div><div class="cName" id="creditsName2">Nishant Gaurav &amp; Team</div>
+        <div class="cRole" id="creditsRole3">Creative Direction</div><div class="cName" id="creditsName3">Nishant Gaurav</div>
+        <div class="cRole" id="creditsRole4">UI/UX Design</div><div class="cName" id="creditsName4">Nishant Gaurav</div>
+        <div class="cRole" id="creditsRole5">Development</div><div class="cName" id="creditsName5">Nishant Gaurav</div>
+        <div class="cRole" id="creditsRole6">Artwork</div><div class="cName" id="creditsName6">Nishant Gaurav &amp; Team <em id="creditsAI1">(produced with AI assistance)</em></div>
+        <div class="cRole" id="creditsRole7">Background Music</div><div class="cName" id="creditsName7">Nishant Gaurav &amp; Team <em id="creditsAI2">(produced with AI assistance)</em></div>
+        <div class="cFooter" id="creditsFooter">© 2026 NiG Studios. All Rights Reserved.</div>
       </div>
     </div>
 
@@ -322,9 +350,9 @@ button{font:inherit}
         <div class="effect" id="effect"></div>
         <div class="placeholder" id="placeholder"></div>
         <div class="tapHints" id="tapHints">
-          <div class="tapHint">◂ Back</div>
-          <div class="tapHint center">🔍 Zoom</div>
-          <div class="tapHint">Next ▸</div>
+          <div class="tapHint" id="tapHintBack">◂ Back</div>
+          <div class="tapHint center" id="tapHintZoom">🔍 Zoom</div>
+          <div class="tapHint" id="tapHintNext">Next ▸</div>
         </div>
         <div class="zoomHint" id="zoomHint">🔍 Tap center to zoom · Tap edges to navigate</div>
         <div class="bubble left" id="bubbleLeft"></div>
@@ -334,7 +362,7 @@ button{font:inherit}
           <div class="speaker" id="speaker"></div>
           <div class="story" id="story"></div>
         </div>
-        <div class="kbdHint">← → Space · Esc to exit · Click image to zoom</div>
+        <div class="kbdHint" id="kbdHint">← → Space · Esc to exit · Click image to zoom</div>
       </div>
       <div class="dots" id="dots"></div>
       <div class="controls">
@@ -346,17 +374,17 @@ button{font:inherit}
 
     <!-- ============ END SCREEN ============ -->
     <div id="end" class="hidden">
-      <div class="eyebrow">The Blessing Remains</div>
-      <h2>The Power of Durva</h2>
-      <div class="endText">Analasura's destructive fire was overcome, and the humble Durva grass brought relief to Ganesha. From that sacred memory grew a cherished offering: <b>21 blades of Durva</b> offered with devotion to Lord Ganesha.</div>
-      <div class="storyNote"><b>Story Note:</b> The Analasura legend is preserved in regional Puranic and devotional traditions, with variations in details across retellings. This comic presents the devotional retelling used for this chapter and its association with the Durva offering.</div>
+      <div class="eyebrow" id="endEyebrow">The Blessing Remains</div>
+      <h2 id="endHeading">The Power of Durva</h2>
+      <div class="endText" id="endTextBody">Analasura's destructive fire was overcome, and the humble Durva grass brought relief to Ganesha. From that sacred memory grew a cherished offering: <b>21 blades of Durva</b> offered with devotion to Lord Ganesha.</div>
+      <div class="storyNote" id="endStoryNoteBody"><b>Story Note:</b> The Analasura legend is preserved in regional Puranic and devotional traditions, with variations in details across retellings. This comic presents the devotional retelling used for this chapter and its association with the Durva offering.</div>
       <div class="finalMantra" lang="hi">गणपति बाप्पा मोरया 🙏</div>
       <div class="endActions">
         <button class="cta" id="again">Read Again</button>
         <button class="cta green" id="closeNote">Close</button>
       </div>
       <div class="endShare">
-        <div class="endShareTitle">🙏 Share this story with others</div>
+        <div class="endShareTitle" id="endShareTitle">🙏 Share this story with others</div>
         <div class="share-row">
           <button class="share-btn whatsapp" onclick="shareWhatsApp()" aria-label="Share on WhatsApp">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -376,11 +404,52 @@ button{font:inherit}
   </div>
 </div>
 
+<!-- ============ LANGUAGE MODAL ============ -->
+<div id="langModal" class="hidden noteOverlay">
+  <div class="noteBox">
+    <div class="eyebrow">Choose Your Language · भाषा चुनें</div>
+    <h2 style="font-family:'Yatra One',cursive;font-size:24px;color:var(--ember2);margin:10px 0 6px;">🙏</h2>
+    <p style="color:var(--muted);font-size:13px;line-height:1.7;">Select a language to read this story in.<br><span lang="hi">कथा पढ़ने हेतु भाषा चुनें।</span></p>
+    <div class="langRow">
+      <button class="langBtn" id="langBtnEn">English</button>
+      <button class="langBtn" id="langBtnHi" lang="hi">हिन्दी<span class="sub">Hindi</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HOW-TO-READ TUTORIAL MODAL ============ -->
+<div id="howtoModal" class="hidden noteOverlay">
+  <div class="noteBox">
+    <div class="eyebrow" id="howtoEyebrow">How to Navigate</div>
+    <h2 id="howtoHeading" style="font-family:'Yatra One',cursive;font-size:24px;color:var(--ember2);margin:10px 0 6px;">🖐️</h2>
+    <p class="howtoNote" id="howtoIntro">Tap anywhere on the picture. The tap zone runs the full height of the image, left to right.</p>
+    <div class="howtoDiagram">
+      <div class="howtoZone">
+        <span class="howtoIcon">◂</span>
+        <span class="howtoLabel" id="howtoLeftLabel">Left side</span>
+        <span class="howtoSub" id="howtoLeftSub">Go back</span>
+      </div>
+      <div class="howtoZone">
+        <span class="howtoIcon">🔍</span>
+        <span class="howtoLabel" id="howtoCenterLabel">Middle</span>
+        <span class="howtoSub" id="howtoCenterSub">Zoom the picture</span>
+      </div>
+      <div class="howtoZone">
+        <span class="howtoIcon">▸</span>
+        <span class="howtoLabel" id="howtoRightLabel">Right side</span>
+        <span class="howtoSub" id="howtoRightSub">Go to next</span>
+      </div>
+    </div>
+    <p class="howtoNote" id="howtoNote2">Top or bottom of the picture makes no difference — only left, middle, or right matters. You can also use the ◂ Back / Next ▸ buttons below the picture.</p>
+    <button class="cta" id="howtoGotIt">Got it</button>
+  </div>
+</div>
+
 <!-- ============ STORY NOTE MODAL ============ -->
 <div id="noteModal" class="hidden noteOverlay">
   <div class="noteBox">
-    <div class="eyebrow">A Note on This Retelling</div>
-    <div class="storyNote"><b>Story Note:</b> The Analasura legend is preserved in regional Puranic and devotional traditions, with variations in details across retellings. This comic presents the devotional retelling used for this chapter and its association with the Durva offering.</div>
+    <div class="eyebrow" id="noteEyebrow">A Note on This Retelling</div>
+    <div class="storyNote" id="noteBody"><b>Story Note:</b> The Analasura legend is preserved in regional Puranic and devotional traditions, with variations in details across retellings. This comic presents the devotional retelling used for this chapter and its association with the Durva offering.</div>
     <button class="cta green" id="closeStoryNote">Close</button>
   </div>
 </div>
@@ -388,10 +457,10 @@ button{font:inherit}
 <!-- ============ RESUME MODAL ============ -->
 <div id="resumeModal" class="hidden noteOverlay">
   <div class="noteBox">
-    <div class="eyebrow">Continue Reading?</div>
-    <h2>Welcome Back 🙏</h2>
-    <p>You were reading <b style="color:var(--gold2);" id="resumePageLabel">page 1</b>.</p>
-    <p style="font-size:12px;">Continue where you left off, or start from the beginning?</p>
+    <div class="eyebrow" id="resumeEyebrow">Continue Reading?</div>
+    <h2 id="resumeHeading">Welcome Back 🙏</h2>
+    <p id="resumeBody1">You were reading <b style="color:var(--gold2);" id="resumePageLabel">page 1</b>.</p>
+    <p style="font-size:12px;" id="resumeBody2">Continue where you left off, or start from the beginning?</p>
     <div class="resumeActions">
       <button class="cta" id="resumeContinue">Continue</button>
       <button class="cta green" id="resumeRestart">Start Over</button>
@@ -415,6 +484,7 @@ button{font:inherit}
 <!-- Audio element — source set dynamically by JS -->
 <audio id="bgMusic" loop preload="auto"></audio>
 <button id="music">🔊 Play Music</button>
+<button id="langToggle" title="Switch language / भाषा बदलें">हिन्दी</button>
 
 <script>
 (() => {
@@ -424,19 +494,232 @@ button{font:inherit}
 //  PAGES DATA
 // ============================================================
 const pages=[
-{file:'page_001.png',chapter:'Chapter I · The Demon Born of Fire',speaker:'Narrator',glyph:'🔥',effect:'fire',text:'Among the demons who once threatened the three worlds, few were feared like <b>Analasura</b> — a terrible force of fire. Wherever he walked, flames followed.',bubble:'',zoom:true},
-{file:'page_002.png',chapter:'Chapter I · The Demon Born of Fire',speaker:'Narrator',glyph:'🔥',effect:'fire',text:'His fiery power became a weapon of destruction. Forests burned, rivers dried, villages fell to ash, and even sacred ashrams were threatened by his flames.',bubble:'',zoom:true},
-{file:'page_003.png',chapter:'Chapter II · The Hunger Grows',speaker:'Analasura',glyph:'👹',effect:'fire',text:'Analasura became more terrifying with every conquest. He did not merely burn what stood before him — he began <b>devouring living beings</b>, growing more monstrous with each victory.',bubble:'"Let the worlds tremble before my fire!"',bubbleSide:'left',zoom:true},
-{file:'page_004.png',chapter:'Chapter II · The Hunger Grows',speaker:'The Gods',glyph:'⛈️',effect:'battle',text:'The destruction spread across the realms. The gods realized that ordinary weapons could not defeat a demon of flame. <b>Fire could not defeat fire.</b> Water alone could not end his fury.',bubble:'"There must be another way…"',bubbleSide:'right'},
-{file:'page_005.png',chapter:'Chapter III · The Call to Ganesha',speaker:'The Gods',glyph:'🙏',effect:'divine',text:'In their hour of greatest need, the gods turned to <b>Lord Ganesha, the remover of obstacles</b>. They prayed for the one power that could end Analasura\'s destruction.',bubble:'"Lord Ganesha, protect the three worlds!"',bubbleSide:'right'},
-{file:'page_006.png',chapter:'Chapter IV · The Confrontation',speaker:'Analasura',glyph:'😤',effect:'fire',text:'Ganesha arrived on the scorched earth. Analasura laughed at the sight of the elephant-headed god and unleashed a massive wave of fire.',bubble:'"Even the gods send a child to face me?"',bubbleSide:'left',shake:true},
-{file:'page_007.png',chapter:'Chapter IV · The Confrontation',speaker:'Ganesha',glyph:'🐘',effect:'divine',text:'Ganesha did not answer the demon with anger. He remained calm — then his divine form began to expand beyond ordinary measure.',bubble:'"Your fire ends here."',bubbleSide:'right',zoom:true},
-{file:'page_008.png',chapter:'Chapter V · The Great Turning',speaker:'Narrator',glyph:'🐘',effect:'divine',text:'Ganesha became immense. He opened his mouth and, in a moment that ended the battle, <b>swallowed Analasura whole</b> — flames, fury, and all.',bubble:'',zoom:true,shake:true},
-{file:'page_009.png',chapter:'Chapter VI · The Fire Within',speaker:'Narrator',glyph:'🥵',effect:'fire',text:'The world was safe. But victory had a price. Analasura\'s fire now burned fiercely <b>within Ganesha</b>, bringing unbearable heat and pain.',bubble:'',zoom:true},
-{file:'page_010.png',chapter:'Chapter VI · The Fire Within',speaker:'The Gods',glyph:'💧',effect:'fire',text:'Cooling waters, soothing chants, and powerful remedies were tried. Nothing was enough. The gods watched their savior suffer and searched desperately for a cure.',bubble:'"How can we cool this divine fire?"',bubbleSide:'right'},
-{file:'page_011.png',chapter:'Chapter VII · Twenty-One Durva',speaker:'Sage Kashyapa',glyph:'🌿',effect:'cooling',text:'At last, <b>Sage Kashyapa</b> arrived with humble Durva grass. Twenty-one blades were offered to Ganesha. The tiny green grass carried a cooling power beyond expectation.',bubble:'"Accept this humble Durva, Lord Ganesha."',bubbleSide:'right',zoom:true},
-{file:'page_012.png',chapter:'Chapter VIII · The Blessing Remains',speaker:'Narrator',glyph:'🙏',effect:'cooling',text:'The terrible heat finally subsided. Ganesha blessed the humble Durva, and its offering became a cherished part of his worship. Today, devotees offer <b>21 blades of Durva</b> with love and faith — especially during Ganesh Chaturthi.',bubble:'',zoom:true}
+{file:'page_001.png',
+ chapter:{en:'Chapter I · The Demon Born of Fire',hi:'अध्याय १ · अग्नि से उत्पन्न दानव'},
+ speaker:{en:'Narrator',hi:'कथावाचक'},glyph:'🔥',effect:'fire',
+ text:{en:'Among the demons who once threatened the three worlds, few were feared like <b>Analasura</b> — a terrible force of fire. Wherever he walked, flames followed.',
+       hi:'तीनों लोकों को संकट में डालने वाले दानवों में <b>अनलासुर</b> जैसा भय शायद ही किसी और से उत्पन्न हुआ हो — वह अग्नि की एक भयंकर शक्ति था। जहाँ भी वह चलता, वहाँ ज्वालाएँ साथ चलतीं।'},
+ bubble:{en:'',hi:''},zoom:true},
+{file:'page_002.png',
+ chapter:{en:'Chapter I · The Demon Born of Fire',hi:'अध्याय १ · अग्नि से उत्पन्न दानव'},
+ speaker:{en:'Narrator',hi:'कथावाचक'},glyph:'🔥',effect:'fire',
+ text:{en:'His fiery power became a weapon of destruction. Forests burned, rivers dried, villages fell to ash, and even sacred ashrams were threatened by his flames.',
+       hi:'उसकी अग्नि-शक्ति विनाश का अस्त्र बन गई। वन जलकर राख हो गए, नदियाँ सूख गईं, गाँव भस्म हो गए, और पवित्र आश्रम भी उसकी ज्वालाओं से संकट में पड़ गए।'},
+ bubble:{en:'',hi:''},zoom:true},
+{file:'page_003.png',
+ chapter:{en:'Chapter II · The Hunger Grows',hi:'अध्याय २ · बढ़ती हुई क्षुधा'},
+ speaker:{en:'Analasura',hi:'अनलासुर'},glyph:'👹',effect:'fire',
+ text:{en:'Analasura became more terrifying with every conquest. He did not merely burn what stood before him — he began <b>devouring living beings</b>, growing more monstrous with each victory.',
+       hi:'प्रत्येक विजय के साथ अनलासुर और भी भयंकर होता गया। वह केवल जो सामने आता उसे जलाता ही नहीं था — उसने <b>जीवित प्राणियों को निगलना</b> आरंभ कर दिया, और हर विजय के साथ और अधिक राक्षसी होता गया।'},
+ bubble:{en:'"Let the worlds tremble before my fire!"',hi:'"मेरी अग्नि के सामने संसार काँप उठे!"'},bubbleSide:'left',zoom:true},
+{file:'page_004.png',
+ chapter:{en:'Chapter II · The Hunger Grows',hi:'अध्याय २ · बढ़ती हुई क्षुधा'},
+ speaker:{en:'The Gods',hi:'देवगण'},glyph:'⛈️',effect:'battle',
+ text:{en:'The destruction spread across the realms. The gods realized that ordinary weapons could not defeat a demon of flame. <b>Fire could not defeat fire.</b> Water alone could not end his fury.',
+       hi:'विनाश समस्त लोकों में फैलने लगा। देवताओं को यह ज्ञात हुआ कि साधारण अस्त्र इस अग्नि-दानव को पराजित नहीं कर सकते। <b>अग्नि, अग्नि को पराजित नहीं कर सकती।</b> केवल जल भी उसके क्रोध को शांत नहीं कर सकता था।'},
+ bubble:{en:'"There must be another way…"',hi:'"अवश्य ही कोई अन्य उपाय होगा…"'},bubbleSide:'right'},
+{file:'page_005.png',
+ chapter:{en:'Chapter III · The Call to Ganesha',hi:'अध्याय ३ · गणेश जी का आह्वान'},
+ speaker:{en:'The Gods',hi:'देवगण'},glyph:'🙏',effect:'divine',
+ text:{en:'In their hour of greatest need, the gods turned to <b>Lord Ganesha, the remover of obstacles</b>. They prayed for the one power that could end Analasura\'s destruction.',
+       hi:'अपने सबसे कठिन समय में देवताओं ने <b>विघ्नहर्ता भगवान गणेश</b> की शरण ली। उन्होंने उस एकमात्र शक्ति की प्रार्थना की जो अनलासुर के विनाश का अंत कर सके।'},
+ bubble:{en:'"Lord Ganesha, protect the three worlds!"',hi:'"हे गणेश भगवान, तीनों लोकों की रक्षा कीजिए!"'},bubbleSide:'right'},
+{file:'page_006.png',
+ chapter:{en:'Chapter IV · The Confrontation',hi:'अध्याय ४ · आमना-सामना'},
+ speaker:{en:'Analasura',hi:'अनलासुर'},glyph:'😤',effect:'fire',
+ text:{en:'Ganesha arrived on the scorched earth. Analasura laughed at the sight of the elephant-headed god and unleashed a massive wave of fire.',
+       hi:'गणेश जी उस झुलसी हुई धरती पर पधारे। गजमुख भगवान को देखकर अनलासुर हँस पड़ा और उसने अग्नि की एक विशाल लहर छोड़ दी।'},
+ bubble:{en:'"Even the gods send a child to face me?"',hi:'"क्या देवताओं ने मुझसे लड़ने हेतु एक बालक को भेजा है?"'},bubbleSide:'left',shake:true},
+{file:'page_007.png',
+ chapter:{en:'Chapter IV · The Confrontation',hi:'अध्याय ४ · आमना-सामना'},
+ speaker:{en:'Ganesha',hi:'गणेश जी'},glyph:'🐘',effect:'divine',
+ text:{en:'Ganesha did not answer the demon with anger. He remained calm — then his divine form began to expand beyond ordinary measure.',
+       hi:'गणेश जी ने दानव को क्रोध से उत्तर नहीं दिया। वे शांत बने रहे — और फिर उनका दिव्य स्वरूप असाधारण रूप से विस्तृत होने लगा।'},
+ bubble:{en:'"Your fire ends here."',hi:'"तुम्हारी अग्नि का अंत अब यहीं होगा।"'},bubbleSide:'right',zoom:true},
+{file:'page_008.png',
+ chapter:{en:'Chapter V · The Great Turning',hi:'अध्याय ५ · महान परिवर्तन'},
+ speaker:{en:'Narrator',hi:'कथावाचक'},glyph:'🐘',effect:'divine',
+ text:{en:'Ganesha became immense. He opened his mouth and, in a moment that ended the battle, <b>swallowed Analasura whole</b> — flames, fury, and all.',
+       hi:'गणेश जी विशाल हो गए। उन्होंने अपना मुख खोला और उस क्षण में, जिसने युद्ध का अंत कर दिया, <b>अनलासुर को समूचा निगल लिया</b> — ज्वालाओं, क्रोध सहित सब कुछ।'},
+ bubble:{en:'',hi:''},zoom:true,shake:true},
+{file:'page_009.png',
+ chapter:{en:'Chapter VI · The Fire Within',hi:'अध्याय ६ · भीतर की अग्नि'},
+ speaker:{en:'Narrator',hi:'कथावाचक'},glyph:'🥵',effect:'fire',
+ text:{en:'The world was safe. But victory had a price. Analasura\'s fire now burned fiercely <b>within Ganesha</b>, bringing unbearable heat and pain.',
+       hi:'संसार सुरक्षित हो गया। परंतु इस विजय का एक मूल्य था। अनलासुर की अग्नि अब <b>गणेश जी के भीतर</b> प्रचंड रूप से जलने लगी, जिससे असहनीय ताप और पीड़ा उत्पन्न हुई।'},
+ bubble:{en:'',hi:''},zoom:true},
+{file:'page_010.png',
+ chapter:{en:'Chapter VI · The Fire Within',hi:'अध्याय ६ · भीतर की अग्नि'},
+ speaker:{en:'The Gods',hi:'देवगण'},glyph:'💧',effect:'fire',
+ text:{en:'Cooling waters, soothing chants, and powerful remedies were tried. Nothing was enough. The gods watched their savior suffer and searched desperately for a cure.',
+       hi:'शीतल जल, शांतिदायक मंत्र और अनेक शक्तिशाली उपाय आजमाए गए। परंतु कुछ भी पर्याप्त नहीं था। देवता अपने रक्षक को पीड़ा में देखकर व्याकुल हो गए और किसी समाधान की खोज में जुट गए।'},
+ bubble:{en:'"How can we cool this divine fire?"',hi:'"इस दिव्य अग्नि को कैसे शांत किया जाए?"'},bubbleSide:'right'},
+{file:'page_011.png',
+ chapter:{en:'Chapter VII · Twenty-One Durva',hi:'अध्याय ७ · इक्कीस दूर्वा'},
+ speaker:{en:'Sage Kashyapa',hi:'कश्यप ऋषि'},glyph:'🌿',effect:'cooling',
+ text:{en:'At last, <b>Sage Kashyapa</b> arrived with humble Durva grass. Twenty-one blades were offered to Ganesha. The tiny green grass carried a cooling power beyond expectation.',
+       hi:'अंततः <b>कश्यप ऋषि</b> विनम्र दूर्वा घास लेकर पधारे। गणेश जी को इक्कीस तिनके अर्पित किए गए। उस छोटी-सी हरी घास में अपेक्षा से कहीं अधिक शीतलता की शक्ति थी।'},
+ bubble:{en:'"Accept this humble Durva, Lord Ganesha."',hi:'"हे गणेश भगवान, यह विनम्र दूर्वा स्वीकार कीजिए।"'},bubbleSide:'right',zoom:true},
+{file:'page_012.png',
+ chapter:{en:'Chapter VIII · The Blessing Remains',hi:'अध्याय ८ · आशीर्वाद सदा बना रहे'},
+ speaker:{en:'Narrator',hi:'कथावाचक'},glyph:'🙏',effect:'cooling',
+ text:{en:'The terrible heat finally subsided. Ganesha blessed the humble Durva, and its offering became a cherished part of his worship. Today, devotees offer <b>21 blades of Durva</b> with love and faith — especially during Ganesh Chaturthi.',
+       hi:'अंततः वह भयंकर ताप शांत हो गया। गणेश जी ने विनम्र दूर्वा को आशीर्वाद दिया, और उसका अर्पण उनकी पूजा का एक प्रिय अंग बन गया। आज भी भक्त प्रेम और श्रद्धा से <b>21 दूर्वा</b> अर्पित करते हैं — विशेष रूप से गणेश चतुर्थी के अवसर पर।'},
+ bubble:{en:'',hi:''},zoom:true}
 ];
+
+// ============================================================
+//  UI TRANSLATIONS
+// ============================================================
+const UI={
+ en:{
+  coverEyebrow:'A Ganesh Chaturthi Tale',
+  coverTitle:'Ganesha vs. Analasura',
+  coverSubtitleBold:'The Fire Within',
+  coverSubtitleBody:'The fire demon who threatened the three worlds — and the humble Durva grass that became a lasting symbol of devotion.',
+  coverReadTime:'🕉️ 12 panels · ~3 min read',
+  begin:'Begin the Story',
+  credits:'Credits',
+  shareLabel:'Share',
+  footer:'© 2026 NiG Studios · Made with devotion 🙏',
+  creditsHeading:'Stories Beyond<br>Imagination',
+  creditsCreatedBy:'Created by Nishant Gaurav',
+  creditsRoles:['Story &amp; Concept','Character Creation','Creative Direction','UI/UX Design','Development','Artwork','Background Music'],
+  creditsNames:['Nishant Gaurav &amp; Team','Nishant Gaurav &amp; Team','Nishant Gaurav','Nishant Gaurav','Nishant Gaurav','Nishant Gaurav &amp; Team','Nishant Gaurav &amp; Team'],
+  creditsAI:'(produced with AI assistance)',
+  creditsFooter:'© 2026 NiG Studios. All Rights Reserved.',
+  creditsClose:'✕ Close',
+  home:'◂ Home',
+  toc:'Story Note',
+  back:'◂ Back',
+  next:'Next ▸',
+  finish:'Finish ▸',
+  tapBack:'◂ Back',
+  tapZoom:'🔍 Zoom',
+  tapNext:'Next ▸',
+  zoomHint:'🔍 Tap center to zoom · Tap edges to navigate',
+  kbdHint:'← → Space · Esc to exit · Click image to zoom',
+  pageOf:(n,total)=>`Page ${n} of ${total}`,
+  loadingArtwork:'Loading artwork…',
+  missingFileHint:(file)=>`Add <b>images/${file}</b> to your project folder to show the artwork here.`,
+  endEyebrow:'The Blessing Remains',
+  endHeading:'The Power of Durva',
+  endText:'Analasura\'s destructive fire was overcome, and the humble Durva grass brought relief to Ganesha. From that sacred memory grew a cherished offering: <b>21 blades of Durva</b> offered with devotion to Lord Ganesha.',
+  storyNoteBody:'<b>Story Note:</b> The Analasura legend is preserved in regional Puranic and devotional traditions, with variations in details across retellings. This comic presents the devotional retelling used for this chapter and its association with the Durva offering.',
+  again:'Read Again',
+  close:'Close',
+  endShareTitle:'🙏 Share this story with others',
+  noteEyebrow:'A Note on This Retelling',
+  resumeEyebrow:'Continue Reading?',
+  resumeHeading:'Welcome Back 🙏',
+  resumeBody1:(n)=>`You were reading <b style="color:var(--gold2);">page ${n}</b>.`,
+  resumeBody2:'Continue where you left off, or start from the beginning?',
+  resumeContinue:'Continue',
+  resumeRestart:'Start Over',
+  musicPromptTitle:'🎵 Background Music',
+  musicPromptBody:'Add cinematic music to your reading?',
+  musicYes:'Yes, play',
+  musicNo:'No thanks',
+  musicPlay:'🔊 Play Music',
+  musicStop:'🔇 Stop Music',
+  lightboxClose:'✕ Close',
+  lightboxHint:'Scroll or pinch to zoom · drag to pan · double-click to reset',
+  zoomReset:'Reset',
+  toastClickFirst:'Click anywhere first, then press Play',
+  toastAudioMissing:'Audio file missing or wrong format',
+  toastCannotPlay:'Cannot play: ',
+  toastLinkCopied:'✓ Link copied!',
+  toastCopyFailed:'Could not copy link',
+  shareTitle:'Ganesha vs. Analasura — The Fire Within',
+  shareText:'🪔 A cinematic retelling of Lord Ganesha\'s battle with the fire demon Analasura. Read it this Ganesh Chaturthi! 🙏',
+  ariaPage:'Page',ariaOf:'of',ariaDialogue:'Dialogue',
+  langToggleLabel:'हिन्दी',
+  howtoEyebrow:'How to Navigate',
+  howtoIntro:'Tap anywhere on the picture. The tap zone runs the full height of the image, left to right.',
+  howtoLeftLabel:'Left side',
+  howtoLeftSub:'Go back',
+  howtoCenterLabel:'Middle',
+  howtoCenterSub:'Zoom the picture',
+  howtoRightLabel:'Right side',
+  howtoRightSub:'Go to next',
+  howtoNote2:'Top or bottom of the picture makes no difference — only left, middle, or right matters. You can also use the ◂ Back / Next ▸ buttons below the picture.',
+  howtoGotIt:'Got it'
+ },
+ hi:{
+  coverEyebrow:'एक गणेश चतुर्थी कथा',
+  coverTitle:'गणेश बनाम अनलासुर',
+  coverSubtitleBold:'भीतर की अग्नि',
+  coverSubtitleBody:'वह अग्नि दानव जिसने तीनों लोकों को संकट में डाल दिया — और वह विनम्र दूर्वा घास जो भक्ति का चिरस्थायी प्रतीक बन गई।',
+  coverReadTime:'🕉️ 12 चित्र · लगभग 3 मिनट में पढ़ें',
+  begin:'कथा आरंभ करें',
+  credits:'श्रेय',
+  shareLabel:'साझा करें',
+  footer:'© 2026 NiG Studios · भक्ति से निर्मित 🙏',
+  creditsHeading:'कल्पना से परे<br>कथाएँ',
+  creditsCreatedBy:'निर्माता: निशांत गौरव',
+  creditsRoles:['कथा एवं संकल्पना','पात्र निर्माण','रचनात्मक निर्देशन','यूआई/यूएक्स डिज़ाइन','विकास','चित्रांकन','पृष्ठभूमि संगीत'],
+  creditsNames:['निशांत गौरव और टीम','निशांत गौरव और टीम','निशांत गौरव','निशांत गौरव','निशांत गौरव','निशांत गौरव और टीम','निशांत गौरव और टीम'],
+  creditsAI:'(एआई सहायता से निर्मित)',
+  creditsFooter:'© 2026 NiG Studios. सर्वाधिकार सुरक्षित।',
+  creditsClose:'✕ बंद करें',
+  home:'◂ मुख्य पृष्ठ',
+  toc:'कथा टिप्पणी',
+  back:'◂ पीछे',
+  next:'आगे ▸',
+  finish:'समाप्त ▸',
+  tapBack:'◂ पीछे',
+  tapZoom:'🔍 ज़ूम',
+  tapNext:'आगे ▸',
+  zoomHint:'🔍 ज़ूम हेतु बीच में टैप करें · आगे-पीछे हेतु किनारों पर टैप करें',
+  kbdHint:'← → स्पेस · बाहर हेतु Esc · ज़ूम हेतु चित्र पर क्लिक करें',
+  pageOf:(n,total)=>`पृष्ठ ${n} / ${total}`,
+  loadingArtwork:'चित्र लोड हो रहा है…',
+  missingFileHint:(file)=>`चित्र दिखाने हेतु <b>images/${file}</b> को अपने प्रोजेक्ट फ़ोल्डर में जोड़ें।`,
+  endEyebrow:'आशीर्वाद सदा बना रहे',
+  endHeading:'दूर्वा की महिमा',
+  endText:'अनलासुर की विनाशकारी अग्नि को शांत किया गया, और विनम्र दूर्वा घास ने गणेश जी को राहत प्रदान की। उसी पावन स्मृति से एक प्रिय परंपरा जन्मी: भगवान गणेश को भक्तिपूर्वक अर्पित की जाने वाली <b>21 दूर्वा</b>।',
+  storyNoteBody:'<b>कथा टिप्पणी:</b> अनलासुर की कथा क्षेत्रीय पौराणिक एवं भक्ति परंपराओं में संरक्षित है, जिसमें विभिन्न प्रस्तुतियों में विवरण भिन्न हो सकते हैं। यह कॉमिक इस अध्याय हेतु प्रयुक्त भक्ति-पूर्ण पुनर्कथन तथा दूर्वा अर्पण से उसके संबंध को प्रस्तुत करता है।',
+  again:'पुनः पढ़ें',
+  close:'बंद करें',
+  endShareTitle:'🙏 इस कथा को दूसरों के साथ साझा करें',
+  noteEyebrow:'इस पुनर्कथन पर एक टिप्पणी',
+  resumeEyebrow:'पढ़ना जारी रखें?',
+  resumeHeading:'पुनः स्वागत है 🙏',
+  resumeBody1:(n)=>`आप <b style="color:var(--gold2);">पृष्ठ ${n}</b> पढ़ रहे थे।`,
+  resumeBody2:'जहाँ से छोड़ा था वहीं से जारी रखें, या आरंभ से पढ़ें?',
+  resumeContinue:'जारी रखें',
+  resumeRestart:'आरंभ से पढ़ें',
+  musicPromptTitle:'🎵 पृष्ठभूमि संगीत',
+  musicPromptBody:'क्या पठन के साथ संगीत बजाएँ?',
+  musicYes:'हां, बजाएँ',
+  musicNo:'नहीं, धन्यवाद',
+  musicPlay:'🔊 संगीत बजाएँ',
+  musicStop:'🔇 संगीत बंद करें',
+  lightboxClose:'✕ बंद करें',
+  lightboxHint:'ज़ूम हेतु स्क्रॉल या पिंच करें · खिसकाने हेतु खींचें · रीसेट हेतु डबल-क्लिक करें',
+  zoomReset:'रीसेट',
+  toastClickFirst:'पहले कहीं भी क्लिक करें, फिर Play दबाएँ',
+  toastAudioMissing:'ऑडियो फ़ाइल उपलब्ध नहीं है या गलत प्रारूप में है',
+  toastCannotPlay:'नहीं चल सका: ',
+  toastLinkCopied:'✓ लिंक कॉपी हो गया!',
+  toastCopyFailed:'लिंक कॉपी नहीं हो सका',
+  shareTitle:'गणेश बनाम अनलासुर — भीतर की अग्नि',
+  shareText:'🪔 भगवान गणेश और अग्नि दानव अनलासुर के युद्ध की एक सजीव कथा। इस गणेश चतुर्थी अवश्य पढ़ें! 🙏',
+  ariaPage:'पृष्ठ',ariaOf:'में से',ariaDialogue:'संवाद',
+  langToggleLabel:'English',
+  howtoEyebrow:'नेविगेशन कैसे करें',
+  howtoIntro:'चित्र पर कहीं भी टैप करें। टैप ज़ोन चित्र की पूरी ऊँचाई में, बाएँ से दाएँ फैला हुआ है।',
+  howtoLeftLabel:'बायाँ भाग',
+  howtoLeftSub:'पीछे जाएँ',
+  howtoCenterLabel:'मध्य भाग',
+  howtoCenterSub:'चित्र को ज़ूम करें',
+  howtoRightLabel:'दायाँ भाग',
+  howtoRightSub:'आगे जाएँ',
+  howtoNote2:'चित्र के ऊपर या नीचे टैप करने से कोई फर्क नहीं पड़ता — केवल बायाँ, मध्य या दायाँ भाग मायने रखता है। आप चित्र के नीचे दिए ◂ पीछे / आगे ▸ बटन भी उपयोग कर सकते हैं।',
+  howtoGotIt:'समझ गया'
+ }
+};
+let lang='en';
 
 // ============================================================
 //  DOM SHORTCUTS
@@ -449,6 +732,8 @@ const title=$('title'),reader=$('reader'),end=$('end'),art=$('art'),artImage=$('
       placeholder=$('placeholder'),effect=$('effect'),story=$('story'),speaker=$('speaker'),
       chapter=$('chapter'),counter=$('counter'),dots=$('dots'),back=$('back'),next=$('next'),
       progress=$('progress'),music=$('bgMusic'),flash=$('flash'),bubbleL=$('bubbleLeft'),bubbleR=$('bubbleRight');
+const langModal=$('langModal'), langToggle=$('langToggle');
+const howtoModal=$('howtoModal');
 
 // ============================================================
 //  SAFE STORAGE
@@ -537,7 +822,6 @@ function initAudio(){
   if(musicInitialized) return;
   musicInitialized=true;
   
-  // Attach diagnostic listeners
   music.addEventListener('error', (e) => {
     const err = music.error;
     console.error('❌ Audio error:');
@@ -553,7 +837,6 @@ function initAudio(){
     console.log('✅ Audio loaded:', music.src);
   });
   
-  // Set initial source
   const initialSrc = trackForPage(0);
   music.src = initialSrc;
   activeTrack = initialSrc;
@@ -562,7 +845,6 @@ function initAudio(){
   console.log('🎵 Music initialized with source:', music.src);
 }
 
-// Play music — the caller should be inside a user gesture
 async function playMusic(){
   console.log('=== PLAY MUSIC ===');
   
@@ -570,7 +852,6 @@ async function playMusic(){
     const targetSrc = trackForPage(current);
     const absoluteSrc = absoluteTrackUrl(targetSrc);
     
-    // If we need to switch tracks, do it
     if (music.src !== absoluteSrc) {
       console.log('Switching track to:', targetSrc);
       music.src = targetSrc;
@@ -585,29 +866,28 @@ async function playMusic(){
     const promise = music.play();
     if (promise !== undefined) await promise;
     
-    musicBtn.textContent = '🔇 Stop Music';
+    musicBtn.textContent = UI[lang].musicStop;
     console.log('✅ Music playing');
     
   } catch(err) {
     console.error('❌ Play failed:', err.name, err.message);
-    musicBtn.textContent = '🔊 Play Music';
+    musicBtn.textContent = UI[lang].musicPlay;
     
-    // Friendly messages
     if (err.name === 'NotAllowedError') {
-      showToast('Click anywhere first, then press Play');
+      showToast(UI[lang].toastClickFirst);
     } else if (err.name === 'NotSupportedError') {
-      showToast('Audio file missing or wrong format');
+      showToast(UI[lang].toastAudioMissing);
     } else if (err.name === 'AbortError') {
       // Ignore — happens when play() is interrupted
     } else {
-      showToast('Cannot play: ' + err.message);
+      showToast(UI[lang].toastCannotPlay + err.message);
     }
   }
 }
 
 function pauseMusic(){
   music.pause();
-  musicBtn.textContent = '🔊 Play Music';
+  musicBtn.textContent = UI[lang].musicPlay;
 }
 
 function toggleMusic(){
@@ -615,7 +895,6 @@ function toggleMusic(){
   else pauseMusic();
 }
 
-// Crossfade between tracks
 function setMusicTrack(src){
   if(activeTrack === src) return;
   activeTrack = src;
@@ -648,25 +927,23 @@ function setMusicTrack(src){
   }, stepMs);
 }
 
-// Music prompt
 function showMusicPrompt(){
   document.querySelector('.musicPrompt')?.remove();
   
   const p = document.createElement('div');
   p.className = 'musicPrompt';
   p.innerHTML = `
-    <h4>🎵 Background Music</h4>
-    <p>Add cinematic music to your reading?</p>
+    <h4>${UI[lang].musicPromptTitle}</h4>
+    <p>${UI[lang].musicPromptBody}</p>
     <div class="mpRow">
-      <button class="yes">Yes, play</button>
-      <button class="no">No thanks</button>
+      <button class="yes">${UI[lang].musicYes}</button>
+      <button class="no">${UI[lang].musicNo}</button>
     </div>`;
   document.body.appendChild(p);
   
   p.querySelector('.yes').onclick = () => {
     SafeStorage.set('music_pref', 'yes');
     p.remove();
-    // Play SYNCHRONOUSLY in the gesture
     const src = trackForPage(current);
     music.src = src;
     activeTrack = src;
@@ -674,7 +951,7 @@ function showMusicPrompt(){
     music.play()
       .then(() => {
         console.log('✅ Music started from prompt');
-        musicBtn.textContent = '🔇 Stop Music';
+        musicBtn.textContent = UI[lang].musicStop;
       })
       .catch(err => {
         console.error('❌ Prompt play failed:', err);
@@ -706,9 +983,8 @@ function preloadAround(idx){
 }
 function loadImage(p){
   const token=p.file;
-  placeholder.innerHTML=`<div><div class="phSpinner"></div><div class="phTitle">Page ${current+1} of ${pages.length}</div><div class="phHint">Loading artwork…</div></div>`;
+  placeholder.innerHTML=`<div><div class="phSpinner"></div><div class="phTitle">${UI[lang].pageOf(current+1,pages.length)}</div><div class="phHint">${UI[lang].loadingArtwork}</div></div>`;
   placeholder.style.display='flex';
-  // Fade the current panel out while the next one loads.
   artImage.classList.add('fade');
   currentImgSrc=null;
   art.style.cursor='default';
@@ -721,8 +997,6 @@ function loadImage(p){
     artImage.style.backgroundImage=`url("${src}")`;
     currentImgSrc=src;
     art.style.cursor='zoom-in';
-    // Fade the new panel back in (double rAF ensures the browser
-    // registers the background-image swap before the transition runs).
     requestAnimationFrame(()=>{
       requestAnimationFrame(()=>artImage.classList.remove('fade'));
     });
@@ -730,7 +1004,7 @@ function loadImage(p){
   };
   img.onerror=()=>{
     if(pages[current].file!==token) return;
-    placeholder.innerHTML=`<div><div class="phGlyph">${p.glyph}</div><div class="phTitle">Page ${current+1} of ${pages.length}</div><div class="phHint">Add <b>images/${p.file}</b> to your project folder to show the artwork here.</div></div>`;
+    placeholder.innerHTML=`<div><div class="phGlyph">${p.glyph}</div><div class="phTitle">${UI[lang].pageOf(current+1,pages.length)}</div><div class="phHint">${UI[lang].missingFileHint(p.file)}</div></div>`;
     placeholder.style.display='flex';
     artImage.classList.remove('fade');
   };
@@ -754,35 +1028,30 @@ function animatePage(p){
 function render(i){
   current=Math.max(0,Math.min(i,pages.length-1));
   const p=pages[current];
-  chapter.textContent=p.chapter;
+  chapter.textContent=p.chapter[lang];
   counter.textContent=`${current+1} / ${pages.length}`;
-  speaker.textContent=p.speaker;
-  story.innerHTML=p.text;
+  speaker.textContent=p.speaker[lang];
+  story.innerHTML=p.text[lang];
   story.animate([{opacity:0,transform:'translateY(7px)'},{opacity:1,transform:'none'}],{duration:420,easing:'ease-out'});
   effect.className='effect '+(p.effect||'');
   bubbleL.classList.remove('show');
   bubbleR.classList.remove('show');
-  if(p.bubble){
+  if(p.bubble[lang]){
     const b=p.bubbleSide==='left'?bubbleL:bubbleR;
-    b.textContent=p.bubble;
+    b.textContent=p.bubble[lang];
     b.classList.add('show');
   }
-  // Accessible description of the current panel for screen readers,
-  // since the artwork itself is a CSS background image with no alt text.
-  const plainText=p.text.replace(/<[^>]*>/g,'');
-  const bubbleText=p.bubble?` Dialogue: ${p.bubble}`:'';
-  art.setAttribute('aria-label', `Page ${current+1} of ${pages.length}. ${p.speaker}: ${plainText}${bubbleText}`);
+  const plainText=p.text[lang].replace(/<[^>]*>/g,'');
+  const bubbleText=p.bubble[lang]?` ${UI[lang].ariaDialogue}: ${p.bubble[lang]}`:'';
+  art.setAttribute('aria-label', `${UI[lang].ariaPage} ${current+1} ${UI[lang].ariaOf} ${pages.length}. ${p.speaker[lang]}: ${plainText}${bubbleText}`);
   loadImage(p);
   animatePage(p);
   [...dots.children].forEach((d,n)=>d.classList.toggle('active',n===current));
   back.disabled=current===0;
-  next.textContent=current===pages.length-1?'Finish ▸':'Next ▸';
+  next.textContent=current===pages.length-1?UI[lang].finish:UI[lang].next;
   progress.style.width=((current+1)/pages.length*100)+'%';
   setMusicTrack(trackForPage(current));
   saveProgress(current);
-  // Show the tap-zone hints (Back / Zoom / Next) on the first few pages
-  // so touch users — who never see the hover-only zoomHint — learn the
-  // interaction pattern before it disappears.
   if(current<3){
     art.classList.add('showHints');
     setTimeout(()=>art.classList.remove('showHints'),3200);
@@ -809,13 +1078,11 @@ function start(){
 
 function showResumeModal(pageIndex){
   const modal = $('resumeModal');
-  $('resumePageLabel').textContent = `page ${pageIndex + 1}`;
+  $('resumeBody1').innerHTML = UI[lang].resumeBody1(pageIndex + 1);
   modal.classList.remove('hidden');
   
   $('resumeContinue').onclick = () => {
     modal.classList.add('hidden');
-    // Page was already rendered by start() before the modal opened —
-    // no need to render it again here.
     afterStart();
   };
   
@@ -826,13 +1093,25 @@ function showResumeModal(pageIndex){
   };
 }
 
+function showHowToModal(onDone){
+  renderStaticUI();
+  howtoModal.classList.remove('hidden');
+  $('howtoGotIt').onclick = () => {
+    SafeStorage.set('howto_seen', '1');
+    howtoModal.classList.add('hidden');
+    if(onDone) onDone();
+  };
+}
+
 function afterStart(){
+  const howtoSeen = SafeStorage.get('howto_seen');
   const pref = SafeStorage.get('music_pref');
-  if(!pref){
-    showMusicPrompt();
+  const maybeMusicPrompt = () => { if(!pref) showMusicPrompt(); };
+  if(!howtoSeen){
+    showHowToModal(maybeMusicPrompt);
+  } else {
+    maybeMusicPrompt();
   }
-  // If pref === 'yes', music already started in the begin button handler
-  // If pref === 'no', do nothing
 }
 
 function finish(){reader.classList.add('hidden');end.classList.remove('hidden');window.scrollTo(0,0);}
@@ -846,8 +1125,8 @@ const canonical = document.querySelector('link[rel="canonical"]')?.href;
 const SHARE_URL = (canonical && canonical.startsWith('http') && !canonical.includes('YOUR-DOMAIN'))
   ? canonical
   : window.location.href;
-const SHARE_TITLE='Ganesha vs. Analasura — The Fire Within';
-const SHARE_TEXT='🪔 A cinematic retelling of Lord Ganesha\'s battle with the fire demon Analasura. Read it this Ganesh Chaturthi! 🙏';
+function getShareTitle(){ return UI[lang].shareTitle; }
+function getShareText(){ return UI[lang].shareText; }
 
 function showToast(message){
   let toast=document.querySelector('.share-toast');
@@ -862,10 +1141,10 @@ function showToast(message){
   toast._timer=setTimeout(()=>toast.classList.remove('show'),2200);
 }
 function shareWhatsApp(){
-  window.open(`https://wa.me/?text=${encodeURIComponent(SHARE_TEXT+'\n\n'+SHARE_URL)}`,'_blank','noopener,noreferrer');
+  window.open(`https://wa.me/?text=${encodeURIComponent(getShareText()+'\n\n'+SHARE_URL)}`,'_blank','noopener,noreferrer');
 }
 function shareTwitter(){
-  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(SHARE_TEXT)}&url=${encodeURIComponent(SHARE_URL)}`,'_blank','noopener,noreferrer');
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(getShareText())}&url=${encodeURIComponent(SHARE_URL)}`,'_blank','noopener,noreferrer');
 }
 function shareFacebook(){
   window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(SHARE_URL)}`,'_blank','noopener,noreferrer');
@@ -873,18 +1152,18 @@ function shareFacebook(){
 async function copyLink(){
   try{
     if(navigator.share){
-      await navigator.share({title:SHARE_TITLE,text:SHARE_TEXT,url:SHARE_URL});
+      await navigator.share({title:getShareTitle(),text:getShareText(),url:SHARE_URL});
       return;
     }
     await navigator.clipboard.writeText(SHARE_URL);
-    showToast('✓ Link copied!');
+    showToast(UI[lang].toastLinkCopied);
   }catch(err){
     const input=document.createElement('input');
     input.value=SHARE_URL;
     document.body.appendChild(input);
     input.select();
-    try{ document.execCommand('copy'); showToast('✓ Link copied!'); }
-    catch(e){ showToast('Could not copy link'); }
+    try{ document.execCommand('copy'); showToast(UI[lang].toastLinkCopied); }
+    catch(e){ showToast(UI[lang].toastCopyFailed); }
     document.body.removeChild(input);
   }
 }
@@ -902,10 +1181,116 @@ $('creditsCloseBtn').addEventListener('click',()=>{$('creditsModal').classList.r
 $('creditsModal').addEventListener('click',e=>{if(e.target.id==='creditsModal')$('creditsModal').classList.remove('open');});
 
 // ============================================================
+//  LANGUAGE SYSTEM
+// ============================================================
+function renderStaticUI(){
+  const t=UI[lang];
+  $('coverEyebrow').textContent=t.coverEyebrow;
+  $('coverTitle').textContent=t.coverTitle;
+  $('coverSubtitleBold').textContent=t.coverSubtitleBold;
+  $('coverSubtitleBody').textContent=t.coverSubtitleBody;
+  $('coverReadTime').textContent=t.coverReadTime;
+  $('begin').textContent=t.begin;
+  $('creditsBtn').textContent=t.credits;
+  $('shareLabel1').textContent=t.shareLabel;
+  $('coverFooter').textContent=t.footer;
+
+  $('creditsHeading').innerHTML=t.creditsHeading;
+  $('creditsCreatedBy').textContent=t.creditsCreatedBy;
+  $('creditsRole1').textContent=t.creditsRoles[0];
+  $('creditsRole2').textContent=t.creditsRoles[1];
+  $('creditsRole3').textContent=t.creditsRoles[2];
+  $('creditsRole4').textContent=t.creditsRoles[3];
+  $('creditsRole5').textContent=t.creditsRoles[4];
+  $('creditsRole6').textContent=t.creditsRoles[5];
+  $('creditsRole7').textContent=t.creditsRoles[6];
+  $('creditsName1').firstChild.textContent=t.creditsNames[0];
+  $('creditsName2').firstChild.textContent=t.creditsNames[1];
+  $('creditsName3').firstChild.textContent=t.creditsNames[2];
+  $('creditsName4').firstChild.textContent=t.creditsNames[3];
+  $('creditsName5').firstChild.textContent=t.creditsNames[4];
+  $('creditsName6').firstChild.textContent=t.creditsNames[5]+' ';
+  $('creditsName7').firstChild.textContent=t.creditsNames[6]+' ';
+  $('creditsAI1').textContent=t.creditsAI;
+  $('creditsAI2').textContent=t.creditsAI;
+  $('creditsFooter').textContent=t.creditsFooter;
+  $('creditsCloseBtn').textContent=t.creditsClose;
+
+  $('home').textContent=t.home;
+  $('toc').textContent=t.toc;
+  back.textContent=t.back;
+  next.textContent = current===pages.length-1 ? t.finish : t.next;
+  $('tapHintBack').textContent=t.tapBack;
+  $('tapHintZoom').textContent=t.tapZoom;
+  $('tapHintNext').textContent=t.tapNext;
+  $('zoomHint').textContent=t.zoomHint;
+  $('kbdHint').textContent=t.kbdHint;
+
+  $('endEyebrow').textContent=t.endEyebrow;
+  $('endHeading').textContent=t.endHeading;
+  $('endTextBody').innerHTML=t.endText;
+  $('endStoryNoteBody').innerHTML=t.storyNoteBody;
+  $('again').textContent=t.again;
+  $('closeNote').textContent=t.close;
+  $('endShareTitle').textContent=t.endShareTitle;
+
+  $('noteEyebrow').textContent=t.noteEyebrow;
+  $('noteBody').innerHTML=t.storyNoteBody;
+  $('closeStoryNote').textContent=t.close;
+
+  $('resumeEyebrow').textContent=t.resumeEyebrow;
+  $('resumeHeading').textContent=t.resumeHeading;
+  $('resumeBody2').textContent=t.resumeBody2;
+  $('resumeContinue').textContent=t.resumeContinue;
+  $('resumeRestart').textContent=t.resumeRestart;
+
+  $('lightboxClose').textContent=t.lightboxClose;
+  $('lightboxHint').textContent=t.lightboxHint;
+  $('zoomResetBtn').textContent=t.zoomReset;
+
+  $('howtoEyebrow').textContent=t.howtoEyebrow;
+  $('howtoIntro').textContent=t.howtoIntro;
+  $('howtoLeftLabel').textContent=t.howtoLeftLabel;
+  $('howtoLeftSub').textContent=t.howtoLeftSub;
+  $('howtoCenterLabel').textContent=t.howtoCenterLabel;
+  $('howtoCenterSub').textContent=t.howtoCenterSub;
+  $('howtoRightLabel').textContent=t.howtoRightLabel;
+  $('howtoRightSub').textContent=t.howtoRightSub;
+  $('howtoNote2').textContent=t.howtoNote2;
+  $('howtoGotIt').textContent=t.howtoGotIt;
+
+  musicBtn.textContent = music.paused ? t.musicPlay : t.musicStop;
+  langToggle.textContent = t.langToggleLabel;
+  document.title = t.shareTitle;
+}
+
+function applyLanguage(l){
+  lang=l;
+  document.body.classList.toggle('lang-hi', l==='hi');
+  document.documentElement.lang = l;
+  SafeStorage.set('site_lang', l);
+  renderStaticUI();
+  if(!reader.classList.contains('hidden')) render(current);
+}
+
+$('langBtnEn').addEventListener('click',()=>{ applyLanguage('en'); langModal.classList.add('hidden'); });
+$('langBtnHi').addEventListener('click',()=>{ applyLanguage('hi'); langModal.classList.add('hidden'); });
+langToggle.addEventListener('click',()=>{ applyLanguage(lang==='hi'?'en':'hi'); });
+
+(function initLanguage(){
+  const saved = SafeStorage.get('site_lang');
+  if(saved==='en' || saved==='hi'){
+    applyLanguage(saved);
+  } else {
+    applyLanguage('en');
+    langModal.classList.remove('hidden');
+  }
+})();
+
+// ============================================================
 //  BUTTON WIRING
 // ============================================================
 $('begin').onclick = () => {
-  // If user previously chose music=yes, start it SYNCHRONOUSLY here
   const pref = SafeStorage.get('music_pref');
   if(pref === 'yes'){
     const src = trackForPage(0);
@@ -913,7 +1298,7 @@ $('begin').onclick = () => {
     activeTrack = src;
     music.volume = BASE_VOL;
     music.play()
-      .then(() => { musicBtn.textContent = '🔇 Stop Music'; })
+      .then(() => { musicBtn.textContent = UI[lang].musicStop; })
       .catch(err => console.warn('Begin play failed:', err));
   }
   
@@ -926,7 +1311,7 @@ $('home').onclick=()=>{
   title.classList.remove('hidden');
   music.pause();
   activeTrack=null;
-  musicBtn.textContent='🔊 Play Music';
+  musicBtn.textContent=UI[lang].musicPlay;
   progress.style.width='0%';
 };
 back.onclick=goBack;
